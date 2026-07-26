@@ -9,7 +9,7 @@ export default function Welcome() {
   return (
     <div className="onboarding-screen">
       <div className="welcome-content fade-in">
-        <img src="/logo.png" alt="ProphyDent AI Logo" className="welcome-logo" />
+        <img src="./logo.png" alt="ProphyDent AI Logo" className="welcome-logo" />
         <h1>Welcome to ProphyDent AI</h1>
         <p className="welcome-subtitle">Precision Prevention, Powered by AI</p>
         

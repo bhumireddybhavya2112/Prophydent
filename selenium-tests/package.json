@@ -1,0 +1,31 @@
+{
+  "name": "prophydent-selenium-tests",
+  "version": "1.0.0",
+  "description": "Selenium Automation Framework for ProphyDent AI",
+  "type": "commonjs",
+  "scripts": {
+    "test": "cross-env NODE_ENV=test mocha --config .mocharc.js",
+    "test:01": "cross-env NODE_ENV=test mocha --config .mocharc.js tests/01_onboarding.test.js",
+    "test:02": "cross-env NODE_ENV=test mocha --config .mocharc.js tests/02_auth.test.js",
+    "test:03": "cross-env NODE_ENV=test mocha --config .mocharc.js tests/03_dashboard.test.js",
+    "test:04": "cross-env NODE_ENV=test mocha --config .mocharc.js tests/04_patients.test.js",
+    "test:05": "cross-env NODE_ENV=test mocha --config .mocharc.js tests/05_analysis.test.js",
+    "test:06": "cross-env NODE_ENV=test mocha --config .mocharc.js tests/06_reports.test.js",
+    "test:07": "cross-env NODE_ENV=test mocha --config .mocharc.js tests/07_settings.test.js",
+    "test:08": "cross-env NODE_ENV=test mocha --config .mocharc.js tests/08_navigation.test.js",
+    "report": "node utils/generateReport.js"
+  },
+  "dependencies": {
+    "chai": "4.4.1",
+    "chromedriver": "130.0.0",
+    "cross-env": "7.0.3",
+    "dotenv": "16.4.5",
+    "exceljs": "4.4.0",
+    "mocha": "10.4.0",
+    "mochawesome": "7.1.3",
+    "mochawesome-merge": "4.3.0",
+    "mochawesome-report-generator": "6.2.0",
+    "selenium-webdriver": "4.27.0",
+    "winston": "3.13.0"
+  }
+}

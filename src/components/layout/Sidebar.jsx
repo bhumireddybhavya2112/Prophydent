@@ -39,7 +39,7 @@ export default function Sidebar() {
     <aside className="sidebar">
       <div className="sidebar-header">
         <div className="logo">
-          <img src="/logo.png" alt="ProphyDent AI" className="logo-img" />
+          <img src="./logo.png" alt="ProphyDent AI" className="logo-img" />
           <h2 className="logo-text">ProphyDent</h2>
         </div>
         <span className="ai-badge">AI</span>

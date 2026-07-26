@@ -1,0 +1,18 @@
+'use strict';
+
+/**
+ * Minimal 1x1 white JPEG as base64 for upload tests.
+ * This avoids needing a real dental image on the filesystem.
+ */
+const SAMPLE_IMAGE_BASE64 =
+  '/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8U' +
+  'HRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgN' +
+  'DRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIy' +
+  'MjIyMjL/wAARCAABAAEDASIAAhEBAxEB/8QAFAABAAAAAAAAAAAAAAAAAAAACf/EABQQAQAAAAAAAAAAAAAAAAAAAAD/xAAUAQEAAAAAAAAAAAAAAAAAAAAA/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8AJQAB/9k=';
+
+const SAMPLE_IMAGE_PATH = null; // Set to a real file path if available
+
+module.exports = {
+  SAMPLE_IMAGE_BASE64,
+  SAMPLE_IMAGE_PATH
+};

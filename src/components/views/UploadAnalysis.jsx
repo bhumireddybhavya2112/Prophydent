@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { UploadCloud, Image as ImageIcon, ArrowLeft, Loader2, AlertTriangle, CheckCircle, Info, Lock } from 'lucide-react';
+import { UploadCloud, Image as ImageIcon, ArrowLeft, Loader2, AlertTriangle, CheckCircle, Info, Lock, Camera, RotateCcw } from 'lucide-react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import { supabase } from '../../lib/supabase';
+import { Camera as CapCamera, CameraResultType, CameraSource } from '@capacitor/camera';
+import { Capacitor } from '@capacitor/core';
+import { getBackendUrl } from '../../lib/config';
 import './UploadAnalysis.css';
 
 export default function UploadAnalysis({ onNavigate }) {
@@ -18,6 +21,36 @@ export default function UploadAnalysis({ onNavigate }) {
   const [saveSuccess, setSaveSuccess] = useState(false);
   const [userRole, setUserRole] = useState('doctor');
   const [currentUser, setCurrentUser] = useState(null);
+
+  const capturePhoto = async (source) => {
+    try {
+      if (Capacitor.isNativePlatform()) {
+        try {
+          const check = await CapCamera.checkPermissions();
+          if (check.camera !== 'granted' || check.photos !== 'granted') {
+            await CapCamera.requestPermissions();
+          }
+        } catch (pe) {
+          console.warn("Failed checking/requesting permissions: ", pe);
+        }
+      }
+
+      const photo = await CapCamera.getPhoto({
+        quality: 90,
+        allowEditing: false,
+        resultType: CameraResultType.Base64,
+        source: source
+      });
+
+      const base64Image = `data:image/jpeg;base64,${photo.base64String}`;
+      setFile(base64Image);
+      handleAnalyze(photo.base64String);
+    } catch (err) {
+      console.error("Camera error:", err);
+      if (err.message && err.message.includes("User cancelled")) return;
+      alert(`Camera Error: ${err.message || err}`);
+    }
+  };
 
   useEffect(() => {
     fetchPatients();
@@ -79,16 +112,20 @@ export default function UploadAnalysis({ onNavigate }) {
     reader.readAsDataURL(uploadedFile);
   };
 
-  const handleAnalyze = async (imageFile) => {
+  const handleAnalyze = async (imageInput) => {
     setStatus('scanning');
     setAnalysisResults(null);
 
     try {
-      const base64Image = await convertToBase64(imageFile);
-      const base64Data = base64Image.split(',')[1];
+      let base64Data;
+      if (typeof imageInput === 'string') {
+        base64Data = imageInput;
+      } else {
+        const base64Image = await convertToBase64(imageInput);
+        base64Data = base64Image.split(',')[1];
+      }
       
-      // We use the local Wi-Fi IP because LocalTunnel rejects large mobile camera images (413 Payload Too Large)
-      const apiUrl = 'https://bhavya0520-pdd-backend.hf.space/analyze';
+      const apiUrl = getBackendUrl();
       const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
@@ -253,21 +290,37 @@ export default function UploadAnalysis({ onNavigate }) {
               <p className="text-muted">Please select a patient from the dropdown above to begin scanning.</p>
             </div>
           ) : !file ? (
-            <div 
-              className={`upload-zone ${isDragging ? 'dragging' : ''}`}
-              onDragOver={handleDragOver}
-              onDragLeave={handleDragLeave}
-              onDrop={handleDrop}
-            >
-              <UploadCloud size={48} className="text-muted mb-4" />
-              <h3>Drag & Drop Image Here</h3>
-              <p className="text-muted">Supports JPG, PNG, DICOM (Max 50MB)</p>
-              <div className="divider">or</div>
-              <input type="file" id="file-upload" className="hidden-input" onChange={handleFileInput} accept="image/*" />
-              <label htmlFor="file-upload" className="btn btn-outline">
-                Browse Files
-              </label>
-            </div>
+            Capacitor.isNativePlatform() ? (
+              <div className="upload-zone native-upload-zone" style={{ padding: '2rem 1.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', border: '2px dashed var(--color-border)', borderRadius: '12px', background: 'rgba(255, 255, 255, 0.05)' }}>
+                <UploadCloud size={48} className="text-muted mb-4" />
+                <h3>Capture or Choose Image</h3>
+                <p className="text-muted" style={{ marginBottom: '1.5rem' }}>Select an option below to analyze a dental scan.</p>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', width: '100%', maxWidth: '260px' }}>
+                  <button className="btn btn-primary" onClick={() => capturePhoto(CameraSource.Camera)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', width: '100%' }}>
+                    <Camera size={18} /> Take Photo
+                  </button>
+                  <button className="btn btn-outline" onClick={() => capturePhoto(CameraSource.Photos)} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', width: '100%' }}>
+                    <ImageIcon size={18} /> Choose from Gallery
+                  </button>
+                </div>
+              </div>
+            ) : (
+              <div 
+                className={`upload-zone ${isDragging ? 'dragging' : ''}`}
+                onDragOver={handleDragOver}
+                onDragLeave={handleDragLeave}
+                onDrop={handleDrop}
+              >
+                <UploadCloud size={48} className="text-muted mb-4" />
+                <h3>Drag & Drop Image Here</h3>
+                <p className="text-muted">Supports JPG, PNG, DICOM (Max 50MB)</p>
+                <div className="divider">or</div>
+                <input type="file" id="file-upload" className="hidden-input" onChange={handleFileInput} accept="image/*" />
+                <label htmlFor="file-upload" className="btn btn-outline">
+                  Browse Files
+                </label>
+              </div>
+            )
           ) : (
             <div className="image-preview-container">
               <img src={file} alt="Scan preview" className="image-preview" />
@@ -372,20 +425,32 @@ export default function UploadAnalysis({ onNavigate }) {
                 )}
               </div>
 
-              <button 
-                className={`btn w-full ${saveSuccess ? 'btn-outline' : 'btn-primary'}`} 
-                style={{ marginTop: '2rem' }}
-                onClick={handleSaveReport}
-                disabled={isSaving || saveSuccess}
-              >
-                {isSaving ? (
-                  <><Loader2 size={18} className="spinner mr-2" style={{ marginBottom: 0, transformOrigin: 'center' }} /> Saving...</>
-                ) : saveSuccess ? (
-                  <><CheckCircle size={18} className="mr-2" /> Saved Successfully!</>
-                ) : (
-                  'Save Clinical Report to Patient Profile'
-                )}
-              </button>
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.8rem', marginTop: '2rem' }}>
+                <button 
+                  className={`btn w-full ${saveSuccess ? 'btn-outline' : 'btn-primary'}`} 
+                  onClick={handleSaveReport}
+                  disabled={isSaving || saveSuccess}
+                >
+                  {isSaving ? (
+                    <><Loader2 size={18} className="spinner mr-2" style={{ marginBottom: 0, transformOrigin: 'center' }} /> Saving...</>
+                  ) : saveSuccess ? (
+                    <><CheckCircle size={18} className="mr-2" /> Saved Successfully!</>
+                  ) : (
+                    'Save Clinical Report to Patient Profile'
+                  )}
+                </button>
+                <button 
+                  className="btn btn-outline w-full" 
+                  onClick={() => {
+                    setFile(null);
+                    setStatus('idle');
+                    setAnalysisResults(null);
+                  }}
+                  style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem' }}
+                >
+                  <RotateCcw size={18} /> Scan Another Image
+                </button>
+              </div>
             </div>
           )}
         </div>

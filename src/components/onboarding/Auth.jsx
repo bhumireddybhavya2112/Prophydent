@@ -65,8 +65,8 @@ export default function Auth() {
     
     try {
       if (!isLogin && role === 'doctor') {
-        if (!email.endsWith('.lmt@prophydent.com')) {
-          throw new Error('Unauthorized email domain for clinical registration. Please contact administration.');
+        if (!email.endsWith('@prophydent.com')) {
+          throw new Error('Unauthorized email domain for clinical registration. Please use your @prophydent.com email.');
         }
       }
 
@@ -116,7 +116,7 @@ export default function Auth() {
         </button>
         
         <div className="auth-header">
-          <img src="/logo.png" alt="Logo" className="small-logo" />
+          <img src="./logo.png" alt="Logo" className="small-logo" />
           <h2>{isLogin ? 'Welcome Back' : 'Create an Account'}</h2>
           <p className="text-muted">
             {role === 'doctor' ? 'Clinical Portal' : 'Patient Portal'}
@@ -198,7 +198,7 @@ export default function Auth() {
             <label>Email Address</label>
             <input 
               type="email" 
-              placeholder="jane.doe@example.com" 
+              placeholder={role === 'doctor' ? "example.lmt@prophydent.com" : "jane.doe@example.com"} 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required 
