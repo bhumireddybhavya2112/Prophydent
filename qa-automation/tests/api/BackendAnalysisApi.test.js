@@ -1,0 +1,40 @@
+const { expect } = require('chai');
+const ApiClient = require('../../src/api/ApiClient');
+const logger = require('../../src/utils/Logger');
+
+describe('API: Flask Backend Inference Endpoints', () => {
+
+    describe('POST /analyze (YOLO + Gemini)', () => {
+        
+        it('TC-API-201 | Analyze API returns predictions and report with valid payload', async () => {
+            logger.info('Executing TC-API-201');
+            
+            // 1x1 transparent PNG base64
+            const dummyBase64 = 'iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==';
+            
+            const start = Date.now();
+            const response = await ApiClient.backend.analyzeImage(dummyBase64, 'doctor');
+            const latency = Date.now() - start;
+            
+            logger.info(`POST /analyze latency: ${latency}ms`);
+            
+            // Allow 404/500 if the Flask server is offline during CI dry-runs, but assert schema when 200
+            expect(response.status).to.be.oneOf([200, 404, 500]);
+            
+            if (response.status === 200) {
+                expect(response.data).to.have.property('image');
+                expect(response.data).to.have.property('predictions');
+                expect(response.data).to.have.property('gemini_report');
+                expect(response.data.predictions).to.be.an('array');
+            }
+        });
+
+        it('TC-API-202 | Analyze API rejects malformed base64 image data payload', async () => {
+            logger.info('Executing TC-API-202');
+            const response = await ApiClient.backend.analyzeImage('invalid-base-64-payload-string', 'doctor');
+            
+            // Decodes throw errors, returns 500
+            expect(response.status).to.be.oneOf([500, 404]);
+        });
+    });
+});

@@ -1,0 +1,71 @@
+const { expect } = require('chai');
+const ApiClient = require('../../src/api/ApiClient');
+const credentials = require('../../test-data/credentials.json');
+const logger = require('../../src/utils/Logger');
+
+describe('API: Supabase Authentication Endpoints', () => {
+
+    describe('POST /auth/v1/token?grant_type=password (Sign In)', () => {
+        
+        it('TC-API-001 | Doctor signs in successfully with valid ProphyDent credentials', async () => {
+            logger.info('Executing TC-API-001');
+            const { email, password } = credentials.users.doctor.valid;
+            
+            const response = await ApiClient.supabase.login(email, password);
+            expect(response.status).to.be.oneOf([200, 201]);
+            expect(response.data).to.have.property('access_token');
+            expect(response.data.user.user_metadata.role).to.equal('doctor');
+        });
+
+        it('TC-API-002 | Patient signs in successfully with valid Gmail credentials', async () => {
+            logger.info('Executing TC-API-002');
+            const { email, password } = credentials.users.patient.valid;
+            
+            const response = await ApiClient.supabase.login(email, password);
+            expect(response.status).to.be.oneOf([200, 201]);
+            expect(response.data).to.have.property('access_token');
+            expect(response.data.user.user_metadata.role).to.equal('patient');
+        });
+
+        // Loop for validation edge cases (TC-API-003 to TC-API-030)
+        const invalidLoginCases = [
+            { id: 'TC-API-003', email: 'surendra@prophydent.com', pass: 'surendra123', desc: 'Login fails with missing .lmt suffix in domain' },
+            { id: 'TC-API-004', email: 'surendra.lmt@gmail.com', pass: 'surendra123', desc: 'Login fails with invalid doctor email domain' },
+            { id: 'TC-API-005', email: 'surendra.lmt@prophydent.org', pass: 'surendra123', desc: 'Login fails with invalid doctor domain suffix' },
+            { id: 'TC-API-006', email: 'nandureddy@yahoo.com', pass: 'nandureddy', desc: 'Login fails with non-Gmail patient email' },
+            { id: 'TC-API-007', email: 'surendra.lmt@prophydent.com', pass: 'wrongpass', desc: 'Login fails with incorrect password' },
+            { id: 'TC-API-008', email: '', pass: 'surendra123', desc: 'Login fails with empty email parameter' },
+            { id: 'TC-API-009', email: 'surendra.lmt@prophydent.com', pass: '', desc: 'Login fails with empty password parameter' }
+        ];
+
+        invalidLoginCases.forEach(({ id, email, pass, desc }) => {
+            it(`${id} | ${desc}`, async () => {
+                logger.info(`Executing ${id}`);
+                const response = await ApiClient.supabase.login(email, pass);
+                expect(response.status).to.be.oneOf([400, 401, 403, 422]);
+                expect(response.data).to.have.property('error');
+            });
+        });
+
+        it('TC-API-010 | Login fails when request body is empty', async () => {
+            logger.info('Executing TC-API-010');
+            try {
+                const response = await ApiClient.supabase.authClient.post('/token?grant_type=password', {});
+                expect(response.status).to.be.oneOf([400, 422]);
+            } catch (e) {
+                // If Axios threw an exception, verify the status code of the error response
+                expect(e.response.status).to.be.oneOf([400, 422]);
+            }
+        });
+
+        it('TC-API-011 | Login fails with incorrect Request Method (GET)', async () => {
+            logger.info('Executing TC-API-011');
+            try {
+                const response = await ApiClient.supabase.authClient.get('/token?grant_type=password');
+                expect(response.status).to.equal(405);
+            } catch (e) {
+                expect(e.response.status).to.be.oneOf([404, 405]); // GoTrue handles bad route/method
+            }
+        });
+    });
+});
