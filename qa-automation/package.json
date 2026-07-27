@@ -6,7 +6,7 @@
   "scripts": {
     "test:web": "wdio run ./config/wdio.conf.js --suite web",
     "test:mobile": "wdio run ./config/wdio.conf.js --suite mobile",
-    "test:api": "wdio run ./config/wdio.conf.js --suite api",
+    "test:vulnerability": "wdio run ./config/wdio.conf.js --suite vulnerability",
     "test:all": "wdio run ./config/wdio.conf.js",
     "test:load": "k6 run ./tests/load/DoctorLoginLoad.js",
     "report": "allure generate ./reports/allure-results --clean && allure open"

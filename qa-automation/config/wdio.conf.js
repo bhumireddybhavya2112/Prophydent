@@ -4,10 +4,14 @@ const fs = require('fs');
 exports.config = {
     runner: 'local',
     specs: [
-        '../tests/web/**/*.js'
+        '../tests/web/**/*.js',
+        '../tests/vulnerability/**/*.js',
+        '../tests/mobile/**/*.js'
     ],
     suites: {
-        web: ['../tests/web/**/*.js']
+        web: ['../tests/web/**/*.js'],
+        vulnerability: ['../tests/vulnerability/**/*.js'],
+        mobile: ['../tests/mobile/**/*.js']
     },
     exclude: [],
     maxInstances: 5,
