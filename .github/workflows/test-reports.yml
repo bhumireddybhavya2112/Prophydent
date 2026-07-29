@@ -1,0 +1,177 @@
+name: QA Automation & Test Reports
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  web-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install Frontend App Dependencies
+        run: npm ci
+
+      - name: Build Frontend Application
+        run: npm run build --if-present
+
+      - name: Start Vite Dev Server
+        run: npm run dev &
+
+      - name: Install wait-on
+        run: npm install -g wait-on
+
+      - name: Wait for Frontend to be ready
+        run: wait-on http://localhost:5173 --timeout 30000
+
+      - name: Install Selenium Suite Dependencies
+        working-directory: qa-automation/selenium
+        run: npm ci
+
+      - name: Run Web & Vulnerability Tests
+        working-directory: qa-automation/selenium
+        run: npm run test:all
+        continue-on-error: true
+
+      - name: Generate Allure Report
+        working-directory: qa-automation/selenium
+        run: |
+          npx allure generate reports/allure-results --clean
+        continue-on-error: true
+
+      - name: Upload Allure Report Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: selenium-allure-report
+          path: qa-automation/selenium/allure-report
+          if-no-files-found: warn
+
+      - name: Upload Failure Screenshots
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: selenium-failure-screenshots
+          path: qa-automation/selenium/reports/screenshots
+          if-no-files-found: ignore
+
+  mobile-tests:
+    runs-on: macos-13
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install Appium and Drivers
+        run: |
+          npm install -g appium
+          appium driver install uiautomator2
+
+      - name: Install Frontend & Capacitor CLI
+        run: npm install
+
+      - name: Sync Capacitor Android Project
+        run: npx cap sync android
+
+      - name: Build Debug Android APK
+        working-directory: android
+        run: ./gradlew assembleDebug
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install Python Dependencies
+        working-directory: qa-automation/appium
+        run: pip install -r requirements.txt pytest-html
+
+      - name: Start Appium Server
+        run: appium --log appium.log &
+
+      - name: Run Appium Tests in Android Emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 30
+          target: google_apis
+          arch: x86_64
+          force-avd-creation: false
+          emulator-options: -no-window -gpu off -no-audio -no-boot-anim
+          disable-animations: true
+          script: |
+            cd qa-automation/appium
+            pytest tests/ --junitxml=report.xml --html=report.html --self-contained-html
+        continue-on-error: true
+
+      - name: Upload Pytest HTML Report
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: appium-pytest-report
+          path: qa-automation/appium/report.html
+
+      - name: Upload Pytest JUnit XML Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: appium-junit-xml
+          path: qa-automation/appium/report.xml
+
+  load-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python for Flask Backend
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Backend Dependencies
+        run: pip install -r ml-engine/requirements.txt
+
+      - name: Start Flask Backend Server
+        run: python ml-engine/server.py &
+
+      - name: Setup k6
+        uses: grafana/setup-k6-action@v1
+
+      - name: Run Doctor Login Load Test
+        run: k6 run qa-automation/load/DoctorLoginLoad.js
+        continue-on-error: true
+
+      - name: Run Combined Performance Load Test
+        run: k6 run qa-automation/load/CombinedPerformanceTest.js
+        continue-on-error: true
+
+      - name: Upload k6 HTML & JSON Summaries
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: k6-load-reports
+          path: qa-automation/load/reports/
