@@ -23,7 +23,7 @@ exports.config = {
     }],
     logLevel: 'info',
     bail: 0,
-    baseUrl: 'http://localhost:5173',
+    baseUrl: 'http://127.0.0.1:5173',
     waitforTimeout: 15000,
     connectionRetryTimeout: 120000,
     connectionRetryCount: 3,

@@ -28,7 +28,7 @@ class BackendApiClient {
             return response;
         } catch (error) {
             logger.error(`API: Flask inference request failed - ${error.message}`);
-            return error.response;
+            return error.response || { status: 500, data: { error: error.message } };
         }
     }
 }
