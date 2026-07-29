@@ -26,6 +26,10 @@ jobs:
         run: npm run build --if-present
 
       - name: Start Vite Dev Server
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          VITE_ROBOFLOW_API_KEY: ${{ secrets.VITE_ROBOFLOW_API_KEY }}
         run: npm run dev &
 
       - name: Install wait-on
@@ -47,6 +51,8 @@ jobs:
         run: pip install -r ml-engine/requirements.txt
 
       - name: Start Flask Backend Server
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python ml-engine/server.py &
 
       - name: Run Web & Vulnerability Tests
@@ -76,7 +82,7 @@ jobs:
           if-no-files-found: ignore
 
   mobile-tests:
-    runs-on: macos-13
+    runs-on: macos-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -169,6 +175,8 @@ jobs:
         run: pip install -r ml-engine/requirements.txt
 
       - name: Start Flask Backend Server
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python ml-engine/server.py &
 
       - name: Setup k6

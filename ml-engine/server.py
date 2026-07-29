@@ -127,6 +127,23 @@ def analyze_image():
         print("Error during inference:", e)
         return jsonify({"error": str(e)}), 500
 
+@app.route('/mock/auth/v1/token', methods=['POST'])
+def mock_auth():
+    return jsonify({
+        "access_token": "dummy-jwt-token",
+        "token_type": "bearer",
+        "expires_in": 3600,
+        "user": {"id": "123", "role": "authenticated"}
+    }), 200
+
+@app.route('/mock/rest/v1/clinical_patients', methods=['GET'])
+def mock_patients():
+    return jsonify([{"id": 1, "name": "Test Patient"}]), 200
+
+@app.route('/mock/rest/v1/clinical_reports', methods=['GET'])
+def mock_reports():
+    return jsonify([{"id": 1, "status": "Ready"}]), 200
+
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     print(f"Starting ProphyDent AI Server on port {port}...")

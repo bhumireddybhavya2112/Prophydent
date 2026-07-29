@@ -14,7 +14,7 @@ export const options = {
 };
 
 export default function () {
-  const url = 'https://ljbrwrpapbmdglpzbpon.supabase.co/auth/v1/token?grant_type=password';
+  const url = 'http://localhost:5000/mock/auth/v1/token?grant_type=password';
   const ANON_KEY = 'sb_publishable_FKWHVZTSoioV0yC7U4jNbg_nfscgxDP';
   
   const payload = JSON.stringify({

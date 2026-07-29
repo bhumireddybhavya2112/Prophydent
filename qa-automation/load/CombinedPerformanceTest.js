@@ -37,8 +37,8 @@ export const options = {
 };
 
 // Base APIs Config
-const SUPABASE_AUTH_URL = 'https://ljbrwrpapbmdglpzbpon.supabase.co/auth/v1';
-const SUPABASE_REST_URL = 'https://ljbrwrpapbmdglpzbpon.supabase.co/rest/v1';
+const SUPABASE_AUTH_URL = 'http://localhost:5000/mock/auth/v1';
+const SUPABASE_REST_URL = 'http://localhost:5000/mock/rest/v1';
 const FLASK_BACKEND_URL = 'http://localhost:5000/analyze';
 const ANON_KEY = 'sb_publishable_FKWHVZTSoioV0yC7U4jNbg_nfscgxDP';
 
