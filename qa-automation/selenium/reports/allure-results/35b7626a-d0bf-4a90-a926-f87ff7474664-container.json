@@ -1,0 +1,1 @@
+{"uuid":"35b7626a-d0bf-4a90-a926-f87ff7474664","children":["20b291f8-57c9-4b82-844c-72cb96d7b980","55f6d999-1e1c-435f-9e98-7e67bbf9f8dd"],"befores":[],"afters":[],"name":"Vulnerability: Supabase Database REST Endpoints: POST /rest/v1/clinical_patients (Insert Patient)"}
