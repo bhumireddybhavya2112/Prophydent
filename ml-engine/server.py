@@ -22,11 +22,13 @@ app = Flask(__name__)
 CORS(app) # Allow React to talk to this server
 
 # Load ALL 5 models!
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATHS = ['best (1).pt', 'best (2).pt', 'best (3).pt', 'best (4).pt', 'best (5).pt']
 models = []
 for path in MODEL_PATHS:
     try:
-        model = YOLO(path)
+        full_path = os.path.join(BASE_DIR, path)
+        model = YOLO(full_path)
         models.append(model)
         print(f"✅ Successfully loaded {path}")
     except Exception as e:

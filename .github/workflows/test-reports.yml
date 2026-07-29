@@ -17,44 +17,36 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install Frontend App Dependencies
         run: npm install
-        continue-on-error: true
 
       - name: Build Frontend Application
         run: npm run build --if-present
-        continue-on-error: true
 
       - name: Start Vite Dev Server
         run: npm run dev &
-        continue-on-error: true
 
       - name: Install wait-on
         run: npm install -g wait-on
-        continue-on-error: true
 
       - name: Wait for Frontend to be ready
         run: wait-on http://localhost:5173 --timeout 30000
-        continue-on-error: true
 
       - name: Install Selenium Suite Dependencies
         working-directory: qa-automation/selenium
         run: npm install
-        continue-on-error: true
 
       - name: Run Web & Vulnerability Tests
         working-directory: qa-automation/selenium
         run: npm run test:all
-        continue-on-error: true
 
       - name: Generate Allure Report
         if: always()
         working-directory: qa-automation/selenium
         run: |
           npx allure generate reports/allure-results --clean
-        continue-on-error: true
 
       - name: Upload Allure Report Artifact
         if: always()
@@ -85,31 +77,27 @@ jobs:
           java-version: '17'
 
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v2
+        uses: android-actions/setup-android@v3
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install Appium and Drivers
         run: |
           npm install -g appium
           appium driver install uiautomator2
-        continue-on-error: true
 
       - name: Install Frontend & Capacitor CLI
         run: npm install
-        continue-on-error: true
 
       - name: Sync Capacitor Android Project
         run: npx cap sync android
-        continue-on-error: true
 
       - name: Build Debug Android APK
         working-directory: android
         run: ./gradlew assembleDebug
-        continue-on-error: true
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -119,11 +107,9 @@ jobs:
       - name: Install Python Dependencies
         working-directory: qa-automation/appium
         run: pip install -r requirements.txt pytest-html
-        continue-on-error: true
 
       - name: Start Appium Server
         run: appium --log appium.log &
-        continue-on-error: true
 
       - name: Run Appium Tests in Android Emulator
         uses: reactivecircus/android-emulator-runner@v2
@@ -137,7 +123,6 @@ jobs:
           script: |
             cd qa-automation/appium
             pytest tests/ --junitxml=report.xml --html=report.html --self-contained-html
-        continue-on-error: true
 
       - name: Upload Pytest HTML Report
         if: always()
@@ -168,22 +153,18 @@ jobs:
 
       - name: Install Backend Dependencies
         run: pip install -r ml-engine/requirements.txt
-        continue-on-error: true
 
       - name: Start Flask Backend Server
         run: python ml-engine/server.py &
-        continue-on-error: true
 
       - name: Setup k6
         uses: grafana/setup-k6-action@v1
 
       - name: Run Doctor Login Load Test
         run: k6 run qa-automation/load/DoctorLoginLoad.js
-        continue-on-error: true
 
       - name: Run Combined Performance Load Test
         run: k6 run qa-automation/load/CombinedPerformanceTest.js
-        continue-on-error: true
 
       - name: Upload k6 HTML & JSON Summaries
         if: always()

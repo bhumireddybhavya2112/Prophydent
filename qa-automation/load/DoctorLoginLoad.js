@@ -14,24 +14,25 @@ export const options = {
 };
 
 export default function () {
-  const url = 'http://localhost:5000/api/auth/login'; // Replace with actual API endpoint
+  const url = 'https://ljbrwrpapbmdglpzbpon.supabase.co/auth/v1/token?grant_type=password';
+  const ANON_KEY = 'sb_publishable_FKWHVZTSoioV0yC7U4jNbg_nfscgxDP';
   
   const payload = JSON.stringify({
-    email: 'automation.lmt@prophydent.com',
-    password: 'automationPassword123!',
-    role: 'doctor'
+    email: 'surendra.lmt@prophydent.com',
+    password: 'surendra123'
   });
 
   const params = {
     headers: {
       'Content-Type': 'application/json',
+      'apikey': ANON_KEY
     },
   };
 
   const res = http.post(url, payload, params);
 
   check(res, {
-    'is status 200': (r) => r.status === 200 || r.status === 404, // 404 allowed for safe dry runs
+    'is status 200': (r) => r.status === 200,
     'transaction time OK': (r) => r.timings.duration < 500,
   });
 
