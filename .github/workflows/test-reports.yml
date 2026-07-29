@@ -103,6 +103,9 @@ jobs:
       - name: Install Frontend & Capacitor CLI
         run: npm install
 
+      - name: Build Frontend Application
+        run: npm run build --if-present
+
       - name: Sync Capacitor Android Project
         run: npx cap sync android
 
