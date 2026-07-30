@@ -6,8 +6,8 @@ module.exports = class BasePage {
      * @param path path of the sub page (e.g. /path/to/page.html)
      */
     async open(path) {
-        logger.info(`Navigating to URL: /${path}`);
-        return browser.url(`/${path}`);
+        logger.info(`Navigating to URL: /#/${path}`);
+        return browser.url(`/#/${path}`);
     }
 
     /**

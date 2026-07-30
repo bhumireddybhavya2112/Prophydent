@@ -17,7 +17,7 @@ describe('Authentication - Patient Registration', function () {
 
     it('TC-WEB-032 | Patient registration succeeds with valid Gmail address and all fields', async () => {
         logger.info('Executing TC-WEB-032');
-        const uniqueEmail = \`test.patient.\${Date.now()}@gmail.com\`;
+        const uniqueEmail = `test.patient.${Date.now()}@gmail.com`;
         
         await AuthPage.fillSignupForm({
             fullName: 'Jane Doe',

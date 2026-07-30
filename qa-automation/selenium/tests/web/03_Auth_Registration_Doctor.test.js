@@ -17,7 +17,7 @@ describe('Authentication - Doctor Registration', function () {
 
     it('TC-WEB-026 | Doctor registration succeeds with valid ProphyDent domain email and all fields', async () => {
         logger.info('Executing TC-WEB-026');
-        const uniqueEmail = \`test.doctor.\${Date.now()}.lmt@prophydent.com\`;
+        const uniqueEmail = `test.doctor.${Date.now()}.lmt@prophydent.com`;
         
         await AuthPage.fillSignupForm({
             fullName: 'Dr. Automated Test',
