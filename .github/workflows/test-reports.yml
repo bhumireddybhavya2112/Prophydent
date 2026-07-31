@@ -23,6 +23,10 @@ jobs:
         run: npm install
 
       - name: Build Frontend Application
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          VITE_ROBOFLOW_API_KEY: ${{ secrets.VITE_ROBOFLOW_API_KEY }}
         run: npm run build --if-present
 
       - name: Start Vite Dev Server
@@ -110,10 +114,17 @@ jobs:
         run: npm install
 
       - name: Build Frontend Application
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          VITE_ROBOFLOW_API_KEY: ${{ secrets.VITE_ROBOFLOW_API_KEY }}
         run: npm run build --if-present
 
       - name: Sync Capacitor Android Project
         run: npx cap sync android
+
+      - name: Make gradlew executable
+        run: chmod +x android/gradlew
 
       - name: Build Debug Android APK
         working-directory: android
@@ -136,7 +147,7 @@ jobs:
         with:
           api-level: 30
           target: google_apis
-          arch: x86_64
+          arch: arm64-v8a
           force-avd-creation: false
           emulator-options: -no-window -gpu off -no-audio -no-boot-anim
           disable-animations: true

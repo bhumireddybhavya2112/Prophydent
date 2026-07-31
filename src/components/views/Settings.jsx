@@ -7,6 +7,7 @@ import './Settings.css';
 
 export default function Settings() {
   const [theme, setTheme] = useState('light');
+  const [isLoading, setIsLoading] = useState(true);
   
   // Security
   const [password, setPassword] = useState('');
@@ -53,6 +54,7 @@ export default function Settings() {
         setAvatar(user.user_metadata?.avatar || '');
         setRole(user.user_metadata?.role || 'patient');
       }
+      setIsLoading(false);
     });
   }, []);
 
@@ -169,6 +171,14 @@ export default function Settings() {
       setIsUpdatingPassword(false);
     }
   };
+
+  if (isLoading) {
+    return (
+      <div className="settings-page fade-in" style={{ display: 'flex', justifyContent: 'center', padding: '3rem' }}>
+        <Loader2 className="spinner text-primary" size={32} />
+      </div>
+    );
+  }
 
   return (
     <div className="settings-page fade-in">
