@@ -22,7 +22,7 @@ class AuthPage extends BasePage {
     // Actions & Messaging
     get btnSubmit() { return $('button[type="submit"]'); }
     get linkToggleMode() { return $('.text-link'); }
-    get errorMessage() { return $('.error-message'); }
+    get errorMessage() { return $('.alert-error'); }
 
     // ----------------------------------------------------------------------
     // Methods
@@ -34,6 +34,7 @@ class AuthPage extends BasePage {
      */
     async open(role = 'doctor') {
         logger.info(`Opening Auth Page for role: ${role}`);
+        await browser.url('about:blank');
         await super.open(`auth?role=${role}`);
         await this.waitForElement(this.container);
     }
@@ -96,7 +97,12 @@ class AuthPage extends BasePage {
      * Checks if error message is displayed
      */
     async isErrorDisplayed() {
-        return this.errorMessage.isDisplayed();
+        try {
+            await this.waitForElement(this.errorMessage, 5000);
+            return true;
+        } catch (e) {
+            return false;
+        }
     }
 }
 

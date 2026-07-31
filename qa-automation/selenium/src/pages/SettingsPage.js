@@ -16,7 +16,7 @@ class SettingsPage extends BasePage {
     get btnSaveProfile() { return $('button*=Save Profile Changes'); }
     
     // Appearance Section
-    get toggleDarkMode() { return $('.toggle-switch input'); }
+    get toggleDarkMode() { return $('.toggle-switch'); }
     get currentThemeElement() { return $('html'); }
 
     // Security Section

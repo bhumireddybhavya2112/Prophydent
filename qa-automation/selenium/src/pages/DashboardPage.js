@@ -46,7 +46,11 @@ class DashboardPage extends BasePage {
     async getStatLabels() {
         await this.waitForElement(this.statCards[0]);
         const labels = await $$('.stat-label');
-        return Promise.all(labels.map(async (label) => await label.getText()));
+        const texts = [];
+        for (const label of labels) {
+            texts.push(await label.getText());
+        }
+        return texts;
     }
 
     /**

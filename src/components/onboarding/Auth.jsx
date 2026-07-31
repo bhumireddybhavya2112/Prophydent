@@ -64,6 +64,10 @@ export default function Auth() {
     setErrorMsg('');
     
     try {
+      if (email !== email.trim()) {
+        throw new Error('Invalid login credentials.');
+      }
+
       if (!isLogin && role === 'doctor') {
         if (!email.endsWith('@prophydent.com')) {
           throw new Error('Unauthorized email domain for clinical registration. Please use your @prophydent.com email.');
@@ -124,7 +128,7 @@ export default function Auth() {
         </div>
 
         {errorMsg && (
-          <div className="error-message" style={{ color: 'var(--color-danger)', marginBottom: '1rem', fontSize: '0.9rem', backgroundColor: 'var(--color-danger-light)', padding: '0.75rem', borderRadius: 'var(--radius-md)' }}>
+          <div className="alert alert-error" style={{ marginBottom: '1rem', padding: '0.75rem', borderRadius: 'var(--radius-md)', fontSize: '0.9rem' }}>
             {errorMsg}
           </div>
         )}

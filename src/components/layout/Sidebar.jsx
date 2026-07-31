@@ -15,7 +15,7 @@ const navItems = [
 export default function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [profile, setProfile] = useState({ name: 'User', role: '' });
+  const [profile, setProfile] = useState({ name: 'User', role: 'doctor', displayRole: 'Dentist' });
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data: { user } }) => {
@@ -23,7 +23,7 @@ export default function Sidebar() {
         setProfile({
           name: user.user_metadata?.full_name || 'User',
           role: user.user_metadata?.role || 'doctor',
-          displayRole: user.user_metadata?.role === 'doctor' ? 'Dentist' : 'Patient',
+          displayRole: user.user_metadata?.role === 'patient' ? 'Patient' : 'Dentist',
           avatar: user.user_metadata?.avatar || null
         });
       }

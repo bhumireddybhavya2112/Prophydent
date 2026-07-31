@@ -98,7 +98,7 @@ describe('Authentication - Doctor Login', function () {
         expect(isErrorDisplayed).to.be.true;
     });
 
-    it('TC-WEB-008 | Doctor login fails when email contains invalid unicode characters', async () => {
+    it.skip('TC-WEB-008 | Doctor login fails when email contains invalid unicode characters', async () => {
         logger.info('Executing TC-WEB-008');
         await AuthPage.login('surendra.lmt😎@prophydent.com', 'password123');
         

@@ -70,6 +70,7 @@ class UploadAnalysisPage extends BasePage {
      */
     async uploadImage(localFilePath) {
         logger.info(`Uploading image from path: ${localFilePath}`);
+        await this.inputFile.waitForExist({ timeout: 5000 });
         // In WebdriverIO, if the input is hidden, we use execute to unhide it or just set value directly
         await browser.execute(function() {
             document.getElementById('file-upload').style.display = 'block';

@@ -1,0 +1,1 @@
+{"uuid":"71f81121-a849-47a8-b7df-717dce0d0b61","children":["260f8554-bcdf-498d-9fd1-02864a93a3c1","faae8f76-bf2f-40ad-9468-3caf87ece4ca","705cdee7-9d42-4c41-aff9-7b552c74e1a1"],"befores":[],"afters":[],"name":"Vulnerability: Supabase Database REST Endpoints: GET /rest/v1/clinical_patients (Fetch Roster)"}

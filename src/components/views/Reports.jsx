@@ -52,7 +52,8 @@ export default function Reports() {
 
   const filteredReports = reports.filter(r => {
     if (userRole === 'patient') return new Date(r.created_at).toLocaleDateString().includes(searchTerm);
-    return r.clinical_patients?.full_name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    const patientName = r.clinical_patients?.full_name || '';
+    return patientName.toLowerCase().includes(searchTerm.toLowerCase()) ||
            new Date(r.created_at).toLocaleDateString().includes(searchTerm);
   });
 
