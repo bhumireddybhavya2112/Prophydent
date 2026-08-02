@@ -126,6 +126,19 @@ jobs:
           VITE_ROBOFLOW_API_KEY: ${{ secrets.VITE_ROBOFLOW_API_KEY }}
         run: npm run build --if-present
 
+      - name: Start Vite Dev Server
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          VITE_ROBOFLOW_API_KEY: ${{ secrets.VITE_ROBOFLOW_API_KEY }}
+        run: npm run dev &
+
+      - name: Install wait-on
+        run: npm install -g wait-on
+
+      - name: Wait for Frontend to be ready
+        run: wait-on http://127.0.0.1:5173 --timeout 30000
+
       - name: Sync Capacitor Android Project
         run: npx cap sync android
 
@@ -141,9 +154,15 @@ jobs:
         with:
           python-version: '3.10'
 
-      - name: Install Python Dependencies
-        working-directory: qa-automation/appium
-        run: pip install -r requirements.txt pytest-html
+      - name: Install Backend & Appium Dependencies
+        run: |
+          pip install -r ml-engine/requirements.txt
+          pip install -r qa-automation/appium/requirements.txt pytest-html
+
+      - name: Start Flask Backend Server
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python ml-engine/server.py &
 
       - name: Start Appium Server
         run: appium --log appium.log &
@@ -158,6 +177,9 @@ jobs:
           emulator-options: -no-window -gpu off -no-audio -no-boot-anim
           disable-animations: true
           script: |
+            adb install android/app/build/outputs/apk/debug/app-debug.apk
+            adb reverse tcp:5173 tcp:5173
+            adb reverse tcp:5000 tcp:5000
             cd qa-automation/appium
             pytest tests/ --junitxml=report.xml --html=report.html --self-contained-html
 
