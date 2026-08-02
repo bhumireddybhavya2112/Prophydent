@@ -108,12 +108,15 @@ describe('Clinical Reports Module', function () {
         if (initialCount > 0) {
             // Search using the newly created patient name
             await ReportsPage.searchReport(createdPatientName);
+            await browser.pause(500);
             
             const filteredCount = await ReportsPage.reportsList.length;
             expect(filteredCount).to.be.at.most(initialCount);
             
             if (filteredCount > 0) {
-                const firstCardTitle = await ReportsPage.reportsList[0].$('.report-card-header h4').getText();
+                const firstCardHeader = ReportsPage.reportsList[0].$('.report-card-header h4');
+                await firstCardHeader.waitForDisplayed({ timeout: 5000 });
+                const firstCardTitle = await firstCardHeader.getText();
                 expect(firstCardTitle).to.equal(createdPatientName);
             }
         }
@@ -122,6 +125,8 @@ describe('Clinical Reports Module', function () {
     it('TC-WEB-254 | Search filters return empty state if search term matches no reports', async () => {
         logger.info('Executing TC-WEB-254');
         await ReportsPage.searchReport('NonExistentPatientNameX1Y2Z3');
+        
+        await ReportsPage.emptyListState.waitForDisplayed({ timeout: 5000 });
         
         const count = await ReportsPage.reportsList.length;
         expect(count).to.equal(0);

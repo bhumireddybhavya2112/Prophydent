@@ -44,7 +44,6 @@ class ReportsPage extends BasePage {
     async searchReport(term) {
         logger.info(`Searching reports for term: ${term}`);
         await this.typeText(this.inputSearch, term);
-        await browser.pause(500); // Brief pause to allow filters to update
     }
 
     /**
