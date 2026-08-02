@@ -1,0 +1,1383 @@
+﻿
+Execution of 12 workers started at 2026-08-02T04:18:46.333Z
+
+2026-08-02T04:18:46.666Z INFO @wdio/cli:launcher: Run onPrepare hook
+2026-08-02T04:18:46.668Z INFO @wdio/utils: Setting up browser driver for: chrome@stable
+2026-08-02T04:18:46.670Z INFO @wdio/utils: Setting up browser binaries for: chrome@stable
+2026-08-02T04:18:46.716Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+node.exe : 2026-08-02T04:18:47.218Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known 
+good version...
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (2026-08-02T04:1...good version...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+2026-08-02T04:18:47.303Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+2026-08-02T04:18:47.308Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:18:47.308Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:18:47.308Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:18:47.309Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:18:47.309Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:18:47.311Z INFO @wdio/local-runner: Start worker 0-0 with arg: run,./config/wdio.conf.js,--suite,web
+2026-08-02T04:18:47.334Z INFO @wdio/local-runner: Start worker 0-1 with arg: run,./config/wdio.conf.js,--suite,web
+2026-08-02T04:18:47.350Z INFO @wdio/local-runner: Start worker 0-2 with arg: run,./config/wdio.conf.js,--suite,web
+2026-08-02T04:18:47.365Z INFO @wdio/local-runner: Start worker 0-3 with arg: run,./config/wdio.conf.js,--suite,web
+2026-08-02T04:18:47.593Z INFO @wdio/local-runner: Start worker 0-4 with arg: run,./config/wdio.conf.js,--suite,web
+[0-3] 2026-08-02T04:19:25.542Z INFO @wdio/local-runner: Run worker command: run
+[0-1] 2026-08-02T04:19:28.439Z INFO @wdio/local-runner: Run worker command: run
+[0-2] 2026-08-02T04:19:30.730Z INFO @wdio/local-runner: Run worker command: run
+[0-0] 2026-08-02T04:19:30.954Z INFO @wdio/local-runner: Run worker command: run
+[0-4] 2026-08-02T04:19:31.726Z INFO @wdio/local-runner: Run worker command: run
+[0-3] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/03_Auth_Registration_Doctor.test.js
+[0-3] 2026-08-02T04:19:34.439Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-1] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/01_Auth_Login_Doctor.test.js
+[0-1] 2026-08-02T04:19:34.683Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-0] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/00_Onboarding.test.js
+[0-2] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/02_Auth_Login_Patient.test.js
+[0-0] 2026-08-02T04:19:36.502Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-2] 2026-08-02T04:19:36.502Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-4] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/04_Auth_Registration_Patient.test.js
+[0-4] 2026-08-02T04:19:38.032Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-3] 2026-08-02T04:19:38.672Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-3] 2026-08-02T04:19:39.174Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-3] 2026-08-02T04:19:39.236Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-3] 2026-08-02T04:19:40.069Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 52322
+[0-3] 2026-08-02T04:19:40.069Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-3] 2026-08-02T04:19:40.069Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-1] 2026-08-02T04:19:40.134Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-3] 2026-08-02T04:19:40.272Z INFO chromedriver: ChromeDriver was started successfully on port 52322.
+[0-1] 2026-08-02T04:19:40.489Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-1] 2026-08-02T04:19:40.535Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-1] 2026-08-02T04:19:40.736Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 52328
+[0-1] 2026-08-02T04:19:40.736Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-1] 2026-08-02T04:19:40.736Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-1] 2026-08-02T04:19:40.775Z INFO chromedriver: ChromeDriver was started successfully on port 52328.
+[0-3] 2026-08-02T04:19:40.966Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=52322 --allowed-origins=* --allowed-ips=0.0.0.0 in 2536ms on port 52322
+[0-2] 2026-08-02T04:19:41.120Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-1] 2026-08-02T04:19:41.586Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=52328 --allowed-origins=* --allowed-ips=0.0.0.0 in 1520ms on port 52328
+[0-2] 2026-08-02T04:19:41.603Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-2] 2026-08-02T04:19:41.661Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-2] 2026-08-02T04:19:41.835Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 59600
+[0-2] 2026-08-02T04:19:41.836Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-2] 2026-08-02T04:19:41.836Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-2] 2026-08-02T04:19:41.941Z INFO chromedriver: ChromeDriver was started successfully on port 59600.
+[0-0] 2026-08-02T04:19:41.977Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-0] 2026-08-02T04:19:42.486Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-0] 2026-08-02T04:19:42.536Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-2] 2026-08-02T04:19:42.735Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=59600 --allowed-origins=* --allowed-ips=0.0.0.0 in 1714ms on port 59600
+[0-4] 2026-08-02T04:19:42.766Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-0] 2026-08-02T04:19:42.795Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 59607
+[0-0] 2026-08-02T04:19:42.795Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-0] 2026-08-02T04:19:42.795Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-0] 2026-08-02T04:19:42.852Z INFO chromedriver: ChromeDriver was started successfully on port 59607.
+[0-4] 2026-08-02T04:19:43.360Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-4] 2026-08-02T04:19:43.408Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-4] 2026-08-02T04:19:43.543Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 59611
+[0-4] 2026-08-02T04:19:43.543Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-4] 2026-08-02T04:19:43.543Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-4] 2026-08-02T04:19:43.601Z INFO chromedriver: ChromeDriver was started successfully on port 59611.
+[0-0] 2026-08-02T04:19:43.708Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=59607 --allowed-origins=* --allowed-ips=0.0.0.0 in 1887ms on port 59607
+[0-3] 2026-08-02T04:19:44.185Z INFO webdriver: [POST] http://127.0.0.1:52322/session
+[0-3] 2026-08-02T04:19:44.185Z INFO webdriver: DATA {
+[0-3]   capabilities: {
+[0-3]     alwaysMatch: {
+[0-3]       browserName: 'chrome',
+[0-3]       acceptInsecureCerts: true,
+[0-3]       'goog:chromeOptions': [Object]
+[0-3]     },
+[0-3]     firstMatch: [ {} ]
+[0-3]   },
+[0-3]   desiredCapabilities: {
+[0-3]     browserName: 'chrome',
+[0-3]     acceptInsecureCerts: true,
+[0-3]     'goog:chromeOptions': {
+[0-3]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-3]       prefs: [Object],
+[0-3]       args: [Array]
+[0-3]     }
+[0-3]   }
+[0-3] }
+[0-1] 2026-08-02T04:19:44.189Z INFO webdriver: [POST] http://127.0.0.1:52328/session
+[0-1] 2026-08-02T04:19:44.189Z INFO webdriver: DATA {
+[0-1]   capabilities: {
+[0-1]     alwaysMatch: {
+[0-1]       browserName: 'chrome',
+[0-1]       acceptInsecureCerts: true,
+[0-1]       'goog:chromeOptions': [Object]
+[0-1]     },
+[0-1]     firstMatch: [ {} ]
+[0-1]   },
+[0-1]   desiredCapabilities: {
+[0-1]     browserName: 'chrome',
+[0-1]     acceptInsecureCerts: true,
+[0-1]     'goog:chromeOptions': {
+[0-1]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-1]       prefs: [Object],
+[0-1]       args: [Array]
+[0-1]     }
+[0-1]   }
+[0-1] }
+[0-2] 2026-08-02T04:19:44.223Z INFO webdriver: [POST] http://127.0.0.1:59600/session
+[0-2] 2026-08-02T04:19:44.223Z INFO webdriver: DATA {
+[0-2]   capabilities: {
+[0-2]     alwaysMatch: {
+[0-2]       browserName: 'chrome',
+[0-2]       acceptInsecureCerts: true,
+[0-2]       'goog:chromeOptions': [Object]
+[0-2]     },
+[0-2]     firstMatch: [ {} ]
+[0-2]   },
+[0-2]   desiredCapabilities: {
+[0-2]     browserName: 'chrome',
+[0-2]     acceptInsecureCerts: true,
+[0-2]     'goog:chromeOptions': {
+[0-2]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-2]       prefs: [Object],
+[0-2]       args: [Array]
+[0-2]     }
+[0-2]   }
+[0-2] }
+[0-4] 2026-08-02T04:19:44.458Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=59611 --allowed-origins=* --allowed-ips=0.0.0.0 in 1873ms on port 59611
+[0-0] 2026-08-02T04:19:45.359Z INFO webdriver: [POST] http://127.0.0.1:59607/session
+[0-0] 2026-08-02T04:19:45.360Z INFO webdriver: DATA {
+[0-0]   capabilities: {
+[0-0]     alwaysMatch: {
+[0-0]       browserName: 'chrome',
+[0-0]       acceptInsecureCerts: true,
+[0-0]       'goog:chromeOptions': [Object]
+[0-0]     },
+[0-0]     firstMatch: [ {} ]
+[0-0]   },
+[0-0]   desiredCapabilities: {
+[0-0]     browserName: 'chrome',
+[0-0]     acceptInsecureCerts: true,
+[0-0]     'goog:chromeOptions': {
+[0-0]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-0]       prefs: [Object],
+[0-0]       args: [Array]
+[0-0]     }
+[0-0]   }
+[0-0] }
+[0-4] 2026-08-02T04:19:48.161Z INFO webdriver: [POST] http://127.0.0.1:59611/session
+[0-4] 2026-08-02T04:19:48.161Z INFO webdriver: DATA {
+[0-4]   capabilities: {
+[0-4]     alwaysMatch: {
+[0-4]       browserName: 'chrome',
+[0-4]       acceptInsecureCerts: true,
+[0-4]       'goog:chromeOptions': [Object]
+[0-4]     },
+[0-4]     firstMatch: [ {} ]
+[0-4]   },
+[0-4]   desiredCapabilities: {
+[0-4]     browserName: 'chrome',
+[0-4]     acceptInsecureCerts: true,
+[0-4]     'goog:chromeOptions': {
+[0-4]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-4]       prefs: [Object],
+[0-4]       args: [Array]
+[0-4]     }
+[0-4]   }
+[0-4] }
+[0-1] 2026-08-02T04:19:52.236Z INFO webdriver: COMMAND deleteAllCookies()
+[0-1] 2026-08-02T04:19:52.414Z INFO webdriver: [DELETE] http://127.0.0.1:52328/session/5aa8e5c5f2c1d3f6e504d575bb0862bf/cookie
+[0-2] 2026-08-02T04:19:52.704Z INFO webdriver: COMMAND deleteAllCookies()
+[0-2] 2026-08-02T04:19:52.711Z INFO webdriver: [DELETE] http://127.0.0.1:59600/session/962446eddb98c82ade8824f21b248e6a/cookie
+[0-3] 2026-08-02T04:19:52.886Z INFO webdriver: COMMAND deleteAllCookies()
+[0-3] 2026-08-02T04:19:52.902Z INFO webdriver: [DELETE] http://127.0.0.1:52322/session/8197e4ed1a298e27975aa2b2a741b782/cookie
+[0-1] 2026-08-02T04:19:53.021Z INFO webdriver: RESULT null
+[0-1] [2026-08-02T04:19:53.022Z] INFO: Opening Auth Page for role: doctor
+[0-1] 2026-08-02T04:19:53.025Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-1] 2026-08-02T04:19:53.042Z INFO webdriver: [POST] http://127.0.0.1:52328/session/5aa8e5c5f2c1d3f6e504d575bb0862bf/url
+[0-1] 2026-08-02T04:19:53.042Z INFO webdriver: DATA { url: 'about:blank' }
+[0-1] 2026-08-02T04:19:53.194Z INFO webdriver: RESULT null
+[0-1] [2026-08-02T04:19:53.194Z] INFO: Navigating to URL: /#/auth?role=doctor
+[0-1] 2026-08-02T04:19:53.195Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=doctor")
+[0-1] 2026-08-02T04:19:53.241Z INFO webdriver: [POST] http://127.0.0.1:52328/session/5aa8e5c5f2c1d3f6e504d575bb0862bf/url
+[0-1] 2026-08-02T04:19:53.242Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-2] 2026-08-02T04:19:53.270Z INFO webdriver: RESULT null
+[0-2] [2026-08-02T04:19:53.271Z] INFO: Opening Auth Page for role: patient
+[0-2] 2026-08-02T04:19:53.274Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-2] 2026-08-02T04:19:53.315Z INFO webdriver: [POST] http://127.0.0.1:59600/session/962446eddb98c82ade8824f21b248e6a/url
+[0-2] 2026-08-02T04:19:53.316Z INFO webdriver: DATA { url: 'about:blank' }
+[0-2] 2026-08-02T04:19:53.430Z INFO webdriver: RESULT null
+[0-2] [2026-08-02T04:19:53.431Z] INFO: Navigating to URL: /#/auth?role=patient
+[0-2] 2026-08-02T04:19:53.432Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=patient")
+[0-2] 2026-08-02T04:19:53.454Z INFO webdriver: [POST] http://127.0.0.1:59600/session/962446eddb98c82ade8824f21b248e6a/url
+[0-2] 2026-08-02T04:19:53.454Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-3] 2026-08-02T04:19:53.856Z INFO webdriver: RESULT null
+[0-3] [2026-08-02T04:19:53.858Z] INFO: Opening Auth Page for role: doctor
+[0-3] 2026-08-02T04:19:53.861Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-3] 2026-08-02T04:19:54.023Z INFO webdriver: [POST] http://127.0.0.1:52322/session/8197e4ed1a298e27975aa2b2a741b782/url
+[0-3] 2026-08-02T04:19:54.023Z INFO webdriver: DATA { url: 'about:blank' }
+[0-3] 2026-08-02T04:19:54.640Z INFO webdriver: RESULT null
+[0-3] [2026-08-02T04:19:54.641Z] INFO: Navigating to URL: /#/auth?role=doctor
+[0-3] 2026-08-02T04:19:54.641Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=doctor")
+[0-3] 2026-08-02T04:19:54.773Z INFO webdriver: [POST] http://127.0.0.1:52322/session/8197e4ed1a298e27975aa2b2a741b782/url
+[0-3] 2026-08-02T04:19:54.773Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-0] 2026-08-02T04:19:57.069Z INFO webdriver: COMMAND deleteAllCookies()
+[0-0] 2026-08-02T04:19:57.074Z INFO webdriver: [DELETE] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/cookie
+[0-4] 2026-08-02T04:19:57.149Z INFO webdriver: COMMAND deleteAllCookies()
+[0-4] 2026-08-02T04:19:57.154Z INFO webdriver: [DELETE] http://127.0.0.1:59611/session/57aa8eccf14c11dacc122b8039bdcfe4/cookie
+[0-0] 2026-08-02T04:19:57.223Z INFO webdriver: RESULT null
+[0-0] [2026-08-02T04:19:57.227Z] INFO: Executing TC-WEB-401
+[0-0] 2026-08-02T04:19:57.230Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/")
+[0-0] 2026-08-02T04:19:57.240Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:19:57.240Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/' }
+[0-4] 2026-08-02T04:19:58.647Z INFO webdriver: RESULT null
+[0-4] [2026-08-02T04:19:58.651Z] INFO: Opening Auth Page for role: patient
+[0-4] 2026-08-02T04:19:58.654Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-4] 2026-08-02T04:19:58.675Z INFO webdriver: [POST] http://127.0.0.1:59611/session/57aa8eccf14c11dacc122b8039bdcfe4/url
+[0-4] 2026-08-02T04:19:58.675Z INFO webdriver: DATA { url: 'about:blank' }
+[0-4] 2026-08-02T04:19:58.760Z INFO webdriver: RESULT null
+[0-4] [2026-08-02T04:19:58.761Z] INFO: Navigating to URL: /#/auth?role=patient
+[0-4] 2026-08-02T04:19:58.761Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=patient")
+[0-4] 2026-08-02T04:19:58.769Z INFO webdriver: [POST] http://127.0.0.1:59611/session/57aa8eccf14c11dacc122b8039bdcfe4/url
+[0-4] 2026-08-02T04:19:58.769Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-1] 2026-08-02T04:20:01.786Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-1]   (Session info: chrome=150.0.7871.187)
+[0-1] 2026-08-02T04:20:01.786Z INFO webdriver: Retrying 1/3
+[0-1] 2026-08-02T04:20:01.787Z INFO webdriver: [POST] http://127.0.0.1:52328/session/5aa8e5c5f2c1d3f6e504d575bb0862bf/url
+[0-1] 2026-08-02T04:20:01.787Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-3] 2026-08-02T04:20:04.729Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-3]   (Session info: chrome=150.0.7871.187)
+[0-3] 2026-08-02T04:20:04.730Z INFO webdriver: Retrying 1/3
+[0-3] 2026-08-02T04:20:04.730Z INFO webdriver: [POST] http://127.0.0.1:52322/session/8197e4ed1a298e27975aa2b2a741b782/url
+[0-3] 2026-08-02T04:20:04.730Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-1] 2026-08-02T04:20:06.263Z INFO webdriver: Retrying 2/3
+[0-1] 2026-08-02T04:20:06.263Z INFO webdriver: [POST] http://127.0.0.1:52328/session/5aa8e5c5f2c1d3f6e504d575bb0862bf/url
+[0-1] 2026-08-02T04:20:06.263Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-1] 2026-08-02T04:20:06.263Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-1]   (Session info: chrome=150.0.7871.187)
+[0-2] 2026-08-02T04:20:09.516Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-2]   (Session info: chrome=150.0.7871.187)
+[0-2] 2026-08-02T04:20:09.516Z INFO webdriver: Retrying 1/3
+[0-2] 2026-08-02T04:20:09.516Z INFO webdriver: [POST] http://127.0.0.1:59600/session/962446eddb98c82ade8824f21b248e6a/url
+[0-2] 2026-08-02T04:20:09.517Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-3] 2026-08-02T04:20:09.526Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-3]   (Session info: chrome=150.0.7871.187)
+[0-3] 2026-08-02T04:20:09.526Z INFO webdriver: Retrying 2/3
+[0-3] 2026-08-02T04:20:09.526Z INFO webdriver: [POST] http://127.0.0.1:52322/session/8197e4ed1a298e27975aa2b2a741b782/url
+[0-3] 2026-08-02T04:20:09.526Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-0] 2026-08-02T04:20:12.129Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:20:12.129Z INFO webdriver: Retrying 1/3
+[0-0] 2026-08-02T04:20:12.130Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:20:12.130Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/' }
+[0-4] 2026-08-02T04:20:12.660Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-4]   (Session info: chrome=150.0.7871.187)
+[0-4] 2026-08-02T04:20:12.661Z INFO webdriver: Retrying 1/3
+[0-4] 2026-08-02T04:20:12.661Z INFO webdriver: [POST] http://127.0.0.1:59611/session/57aa8eccf14c11dacc122b8039bdcfe4/url
+[0-4] 2026-08-02T04:20:12.661Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-1] 2026-08-02T04:20:12.779Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-1]   (Session info: chrome=150.0.7871.187)
+[0-1] 2026-08-02T04:20:12.779Z INFO webdriver: Retrying 3/3
+[0-1] 2026-08-02T04:20:12.779Z INFO webdriver: [POST] http://127.0.0.1:52328/session/5aa8e5c5f2c1d3f6e504d575bb0862bf/url
+[0-1] 2026-08-02T04:20:12.779Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-3] 2026-08-02T04:20:16.298Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-3]   (Session info: chrome=150.0.7871.187)
+[0-3] 2026-08-02T04:20:16.298Z INFO webdriver: Retrying 3/3
+[0-3] 2026-08-02T04:20:16.298Z INFO webdriver: [POST] http://127.0.0.1:52322/session/8197e4ed1a298e27975aa2b2a741b782/url
+[0-3] 2026-08-02T04:20:16.298Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-2] 2026-08-02T04:20:16.694Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-2]   (Session info: chrome=150.0.7871.187)
+[0-2] 2026-08-02T04:20:16.694Z INFO webdriver: Retrying 2/3
+[0-2] 2026-08-02T04:20:16.694Z INFO webdriver: [POST] http://127.0.0.1:59600/session/962446eddb98c82ade8824f21b248e6a/url
+[0-2] 2026-08-02T04:20:16.694Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-1] 2026-08-02T04:20:17.317Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-1]   (Session info: chrome=150.0.7871.187)
+[0-1] 2026-08-02T04:20:17.348Z INFO webdriver: COMMAND deleteSession()
+[0-1] 2026-08-02T04:20:17.355Z INFO webdriver: [DELETE] http://127.0.0.1:52328/session/5aa8e5c5f2c1d3f6e504d575bb0862bf
+[0-0] 2026-08-02T04:20:22.165Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0] 2026-08-02T04:20:22.165Z INFO webdriver: Retrying 2/3
+[0-0] 2026-08-02T04:20:22.166Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:20:22.166Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/' }
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-4] 2026-08-02T04:20:23.284Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-4]   (Session info: chrome=150.0.7871.187)
+[0-4] 2026-08-02T04:20:23.285Z INFO webdriver: Retrying 2/3
+[0-4] 2026-08-02T04:20:23.285Z INFO webdriver: [POST] http://127.0.0.1:59611/session/57aa8eccf14c11dacc122b8039bdcfe4/url
+[0-4] 2026-08-02T04:20:23.285Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-3] 2026-08-02T04:20:23.315Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-3]   (Session info: chrome=150.0.7871.187)
+[0-3] 2026-08-02T04:20:23.361Z INFO webdriver: COMMAND deleteSession()
+[0-3] 2026-08-02T04:20:23.411Z INFO webdriver: [DELETE] http://127.0.0.1:52322/session/8197e4ed1a298e27975aa2b2a741b782
+[0-2] 2026-08-02T04:20:23.491Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-2]   (Session info: chrome=150.0.7871.187)
+[0-2] 2026-08-02T04:20:23.491Z INFO webdriver: Retrying 3/3
+[0-2] 2026-08-02T04:20:23.491Z INFO webdriver: [POST] http://127.0.0.1:59600/session/962446eddb98c82ade8824f21b248e6a/url
+[0-2] 2026-08-02T04:20:23.491Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-4] 2026-08-02T04:20:28.210Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-4]   (Session info: chrome=150.0.7871.187)
+[0-4] 2026-08-02T04:20:28.210Z INFO webdriver: Retrying 3/3
+[0-4] 2026-08-02T04:20:28.210Z INFO webdriver: [POST] http://127.0.0.1:59611/session/57aa8eccf14c11dacc122b8039bdcfe4/url
+[0-4] 2026-08-02T04:20:28.210Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-0] 2026-08-02T04:20:29.198Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:20:29.198Z INFO webdriver: Retrying 3/3
+[0-0] 2026-08-02T04:20:29.199Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:20:29.199Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/' }
+[0-2] 2026-08-02T04:20:30.427Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-2]   (Session info: chrome=150.0.7871.187)
+[0-2] 2026-08-02T04:20:30.456Z INFO webdriver: COMMAND deleteSession()
+[0-2] 2026-08-02T04:20:30.459Z INFO webdriver: [DELETE] http://127.0.0.1:59600/session/962446eddb98c82ade8824f21b248e6a
+[0-0] 2026-08-02T04:20:33.884Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:20:33.895Z INFO webdriver: COMMAND takeScreenshot()
+[0-0] 2026-08-02T04:20:33.897Z INFO webdriver: [GET] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/screenshot
+[0-0] 2026-08-02T04:20:34.012Z INFO webdriver: RESULT iVBORw0KGgoAAAANSUhEUgAAB24AAAOgCAIAAAB6CMF2AAAQAElEQVR4nOzdC...
+[0-0] [Screenshot] Saved failure screenshot to: D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\reports\screenshots\TC_WEB_401___Splash_screen_displays_loader_and_transitions_to_welcome_page_2026-08-02T04-20-33-895Z.png
+[0-0] unknown error in "Onboarding & Landing Page Flows.TC-WEB-401 | Splash screen displays loader and transitions to welcome page"
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\00_Onboarding.test.js:15:9)
+[0-0] 2026-08-02T04:20:34.029Z INFO webdriver: COMMAND deleteAllCookies()
+[0-0] 2026-08-02T04:20:34.030Z INFO webdriver: [DELETE] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/cookie
+[0-0] 2026-08-02T04:20:34.074Z INFO webdriver: RESULT null
+[0-0] [2026-08-02T04:20:34.075Z] INFO: Executing TC-WEB-402
+[0-0] [2026-08-02T04:20:34.075Z] INFO: Navigating to Welcome Page
+[0-0] [2026-08-02T04:20:34.076Z] INFO: Navigating to URL: /#/welcome
+[0-0] 2026-08-02T04:20:34.076Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/welcome")
+[0-0] 2026-08-02T04:20:34.077Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:20:34.077Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/welcome' }
+[0-4] 2026-08-02T04:20:34.513Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-4]   (Session info: chrome=150.0.7871.187)
+[0-4] 2026-08-02T04:20:34.539Z INFO webdriver: COMMAND deleteSession()
+[0-4] 2026-08-02T04:20:34.541Z INFO webdriver: [DELETE] http://127.0.0.1:59611/session/57aa8eccf14c11dacc122b8039bdcfe4
+[0-0] 2026-08-02T04:20:38.524Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:20:38.524Z INFO webdriver: Retrying 1/3
+[0-0] 2026-08-02T04:20:38.524Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:20:38.524Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/welcome' }
+[0-2] 2026-08-02T04:20:42.594Z INFO webdriver: RESULT null
+[0-2] 2026-08-02T04:20:42.594Z INFO webdriver: Kill driver process with PID 32388
+[0-2] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/02_Auth_Login_Patient.test.js
+2026-08-02T04:20:42.873Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2026-08-02T04:20:42.879Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:20:42.895Z INFO @wdio/local-runner: Start worker 0-5 with arg: run,./config/wdio.conf.js,--suite,web
+[0-0] 2026-08-02T04:20:42.879Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:20:42.879Z INFO webdriver: Retrying 2/3
+[0-0] 2026-08-02T04:20:42.879Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:20:42.879Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/welcome' }
+[0-0] 2026-08-02T04:20:49.005Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:20:49.005Z INFO webdriver: Retrying 3/3
+[0-0] 2026-08-02T04:20:49.005Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:20:49.005Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/welcome' }
+[0-5] 2026-08-02T04:20:51.930Z INFO @wdio/local-runner: Run worker command: run
+[0-0] 2026-08-02T04:20:53.357Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:20:53.360Z INFO webdriver: COMMAND takeScreenshot()
+[0-0] 2026-08-02T04:20:53.364Z INFO webdriver: [GET] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/screenshot
+[0-0] 2026-08-02T04:20:53.479Z INFO webdriver: RESULT iVBORw0KGgoAAAANSUhEUgAAB24AAAOgCAIAAAB6CMF2AAAQAElEQVR4nOzdC...
+[0-0] [Screenshot] Saved failure screenshot to: D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\reports\screenshots\TC_WEB_402___Welcome_page_displays_title_and_allows_navigating_to_role_selection_2026-08-02T04-20-53-359Z.png
+[0-0] unknown error in "Onboarding & Landing Page Flows.TC-WEB-402 | Welcome page displays title and allows navigating to role selection"
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async OnboardingPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\OnboardingPage.js:33:9)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\00_Onboarding.test.js:32:9)
+[0-0] 2026-08-02T04:20:53.487Z INFO webdriver: COMMAND deleteAllCookies()
+[0-0] 2026-08-02T04:20:53.493Z INFO webdriver: [DELETE] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/cookie
+[0-5] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/05_Dashboard.test.js
+[0-5] 2026-08-02T04:20:53.520Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-0] 2026-08-02T04:20:53.526Z INFO webdriver: RESULT null
+[0-0] [2026-08-02T04:20:53.527Z] INFO: Executing TC-WEB-403
+[0-0] 2026-08-02T04:20:53.528Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/role")
+[0-0] 2026-08-02T04:20:53.529Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:20:53.529Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/role' }
+[0-5] 2026-08-02T04:20:54.860Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-5] 2026-08-02T04:20:55.220Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-5] 2026-08-02T04:20:55.272Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-5] 2026-08-02T04:20:55.342Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 62024
+[0-5] 2026-08-02T04:20:55.342Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-5] 2026-08-02T04:20:55.342Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-5] 2026-08-02T04:20:55.356Z INFO chromedriver: ChromeDriver was started successfully on port 62024.
+[0-5] 2026-08-02T04:20:56.313Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=62024 --allowed-origins=* --allowed-ips=0.0.0.0 in 1508ms on port 62024
+[0-5] 2026-08-02T04:20:57.023Z INFO webdriver: [POST] http://127.0.0.1:62024/session
+[0-5] 2026-08-02T04:20:57.023Z INFO webdriver: DATA {
+[0-5]   capabilities: {
+[0-5]     alwaysMatch: {
+[0-5]       browserName: 'chrome',
+[0-5]       acceptInsecureCerts: true,
+[0-5]       'goog:chromeOptions': [Object]
+[0-5]     },
+[0-5]     firstMatch: [ {} ]
+[0-5]   },
+[0-5]   desiredCapabilities: {
+[0-5]     browserName: 'chrome',
+[0-5]     acceptInsecureCerts: true,
+[0-5]     'goog:chromeOptions': {
+[0-5]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-5]       prefs: [Object],
+[0-5]       args: [Array]
+[0-5]     }
+[0-5]   }
+[0-5] }
+[0-0] 2026-08-02T04:20:58.129Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:20:58.130Z INFO webdriver: Retrying 1/3
+[0-0] 2026-08-02T04:20:58.130Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:20:58.130Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/role' }
+[0-5] 2026-08-02T04:20:58.778Z INFO webdriver: COMMAND deleteAllCookies()
+[0-5] 2026-08-02T04:20:58.781Z INFO webdriver: [DELETE] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/cookie
+[0-5] 2026-08-02T04:20:58.959Z INFO webdriver: RESULT null
+[0-5] [2026-08-02T04:20:58.961Z] INFO: Opening Auth Page for role: doctor
+[0-5] 2026-08-02T04:20:58.963Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-5] 2026-08-02T04:20:58.967Z INFO webdriver: [POST] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/url
+[0-5] 2026-08-02T04:20:58.967Z INFO webdriver: DATA { url: 'about:blank' }
+[0-5] 2026-08-02T04:20:59.119Z INFO webdriver: RESULT null
+[0-5] [2026-08-02T04:20:59.120Z] INFO: Navigating to URL: /#/auth?role=doctor
+[0-5] 2026-08-02T04:20:59.121Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=doctor")
+[0-5] 2026-08-02T04:20:59.129Z INFO webdriver: [POST] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/url
+[0-5] 2026-08-02T04:20:59.129Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-0] 2026-08-02T04:21:07.208Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:21:07.209Z INFO webdriver: Retrying 2/3
+[0-0] 2026-08-02T04:21:07.209Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:21:07.209Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/role' }
+[0-5] 2026-08-02T04:21:09.699Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-5]   (Session info: chrome=150.0.7871.187)
+[0-5] 2026-08-02T04:21:09.700Z INFO webdriver: Retrying 1/3
+[0-5] 2026-08-02T04:21:09.700Z INFO webdriver: [POST] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/url
+[0-5] 2026-08-02T04:21:09.700Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-0] 2026-08-02T04:21:11.628Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:21:11.628Z INFO webdriver: Retrying 3/3
+[0-0] 2026-08-02T04:21:11.628Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:21:11.628Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/role' }
+[0-4] 2026-08-02T04:21:11.747Z INFO webdriver: RESULT null
+[0-4] 2026-08-02T04:21:11.747Z INFO webdriver: Kill driver process with PID 26728
+[0-4] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/04_Auth_Registration_Patient.test.js
+2026-08-02T04:21:11.959Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2026-08-02T04:21:11.959Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:21:11.961Z INFO @wdio/local-runner: Start worker 0-6 with arg: run,./config/wdio.conf.js,--suite,web
+[0-5] 2026-08-02T04:21:14.191Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-5]   (Session info: chrome=150.0.7871.187)
+[0-5] 2026-08-02T04:21:14.192Z INFO webdriver: Retrying 2/3
+[0-5] 2026-08-02T04:21:14.192Z INFO webdriver: [POST] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/url
+[0-5] 2026-08-02T04:21:14.192Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-0] 2026-08-02T04:21:16.080Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:21:16.081Z INFO webdriver: COMMAND takeScreenshot()
+[0-0] 2026-08-02T04:21:16.088Z INFO webdriver: [GET] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/screenshot
+[0-0] 2026-08-02T04:21:16.229Z INFO webdriver: RESULT iVBORw0KGgoAAAANSUhEUgAAB24AAAOgCAIAAAB6CMF2AAAQAElEQVR4nOzdC...
+[0-0] [Screenshot] Saved failure screenshot to: D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\reports\screenshots\TC_WEB_403___Role_Selection_page_allows_choosing_Doctor_role_2026-08-02T04-21-16-081Z.png
+[0-0] unknown error in "Onboarding & Landing Page Flows.TC-WEB-403 | Role Selection page allows choosing Doctor role"
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\00_Onboarding.test.js:45:9)
+[0-0] 2026-08-02T04:21:16.235Z INFO webdriver: COMMAND deleteAllCookies()
+[0-0] 2026-08-02T04:21:16.243Z INFO webdriver: [DELETE] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/cookie
+[0-0] 2026-08-02T04:21:16.417Z INFO webdriver: RESULT null
+[0-0] [2026-08-02T04:21:16.418Z] INFO: Executing TC-WEB-404
+[0-0] 2026-08-02T04:21:16.419Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/role")
+[0-0] 2026-08-02T04:21:16.426Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:21:16.426Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/role' }
+[0-1] 2026-08-02T04:21:17.375Z INFO webdriver: RESULT null
+[0-1] 2026-08-02T04:21:17.376Z INFO webdriver: Kill driver process with PID 24868
+[0-1] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/01_Auth_Login_Doctor.test.js
+2026-08-02T04:21:17.562Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2026-08-02T04:21:17.562Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:21:17.564Z INFO @wdio/local-runner: Start worker 0-7 with arg: run,./config/wdio.conf.js,--suite,web
+[0-5] 2026-08-02T04:21:18.650Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-5]   (Session info: chrome=150.0.7871.187)
+[0-5] 2026-08-02T04:21:18.650Z INFO webdriver: Retrying 3/3
+[0-5] 2026-08-02T04:21:18.651Z INFO webdriver: [POST] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/url
+[0-5] 2026-08-02T04:21:18.651Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-0] 2026-08-02T04:21:20.953Z INFO webdriver: Retrying 1/3
+[0-0] 2026-08-02T04:21:20.954Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:21:20.954Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/role' }
+[0-0] 2026-08-02T04:21:20.953Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-5] 2026-08-02T04:21:23.086Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-5]   (Session info: chrome=150.0.7871.187)
+[0-5] unknown error in "Dashboard Module - Role Based Testing.Doctor Dashboard."before all" hook: wrappedHook for "TC-WEB-051 | Doctor Dashboard loads successfully with correct welcome message""
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\05_Dashboard.test.js:17:13)
+[0-5] 2026-08-02T04:21:23.107Z INFO webdriver: COMMAND deleteAllCookies()
+[0-5] 2026-08-02T04:21:23.127Z INFO webdriver: [DELETE] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/cookie
+[0-5] 2026-08-02T04:21:23.150Z INFO webdriver: RESULT null
+[0-5] [2026-08-02T04:21:23.150Z] INFO: Opening Auth Page for role: patient
+[0-5] 2026-08-02T04:21:23.151Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-5] 2026-08-02T04:21:23.152Z INFO webdriver: [POST] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/url
+[0-5] 2026-08-02T04:21:23.152Z INFO webdriver: DATA { url: 'about:blank' }
+[0-5] 2026-08-02T04:21:23.347Z INFO webdriver: RESULT null
+[0-5] [2026-08-02T04:21:23.347Z] INFO: Navigating to URL: /#/auth?role=patient
+[0-5] 2026-08-02T04:21:23.347Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=patient")
+[0-5] 2026-08-02T04:21:23.356Z INFO webdriver: [POST] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/url
+[0-5] 2026-08-02T04:21:23.356Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-3] 2026-08-02T04:21:23.430Z INFO webdriver: RESULT null
+[0-3] 2026-08-02T04:21:23.431Z INFO webdriver: Kill driver process with PID 27844
+[0-3] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/03_Auth_Registration_Doctor.test.js
+2026-08-02T04:21:23.725Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2026-08-02T04:21:23.726Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:21:23.727Z INFO @wdio/local-runner: Start worker 0-8 with arg: run,./config/wdio.conf.js,--suite,web
+[0-0] 2026-08-02T04:21:25.398Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:21:25.398Z INFO webdriver: Retrying 2/3
+[0-0] 2026-08-02T04:21:25.398Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:21:25.398Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/role' }
+[0-6] 2026-08-02T04:21:26.822Z INFO @wdio/local-runner: Run worker command: run
+[0-5] 2026-08-02T04:21:27.863Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-5]   (Session info: chrome=150.0.7871.187)
+[0-5] 2026-08-02T04:21:27.863Z INFO webdriver: Retrying 1/3
+[0-5] 2026-08-02T04:21:27.864Z INFO webdriver: [POST] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/url
+[0-5] 2026-08-02T04:21:27.864Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-6] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/06_Navigation.test.js
+[0-6] 2026-08-02T04:21:29.698Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-0] 2026-08-02T04:21:29.878Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:21:29.878Z INFO webdriver: Retrying 3/3
+[0-0] 2026-08-02T04:21:29.878Z INFO webdriver: [POST] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/url
+[0-0] 2026-08-02T04:21:29.878Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/role' }
+[0-5] 2026-08-02T04:21:32.487Z INFO webdriver: Retrying 2/3
+[0-5] 2026-08-02T04:21:32.487Z INFO webdriver: [POST] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/url
+[0-5] 2026-08-02T04:21:32.487Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-5] 2026-08-02T04:21:32.487Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-5]   (Session info: chrome=150.0.7871.187)
+[0-6] 2026-08-02T04:21:33.280Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-6] 2026-08-02T04:21:33.743Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-6] 2026-08-02T04:21:33.792Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-6] 2026-08-02T04:21:33.949Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 63130
+[0-6] 2026-08-02T04:21:33.949Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-6] 2026-08-02T04:21:33.950Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-6] 2026-08-02T04:21:33.997Z INFO chromedriver: ChromeDriver was started successfully on port 63130.
+[0-0] 2026-08-02T04:21:34.424Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-0]   (Session info: chrome=150.0.7871.187)
+[0-0] 2026-08-02T04:21:34.425Z INFO webdriver: COMMAND takeScreenshot()
+[0-0] 2026-08-02T04:21:34.427Z INFO webdriver: [GET] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38/screenshot
+[0-0] 2026-08-02T04:21:34.547Z INFO webdriver: RESULT iVBORw0KGgoAAAANSUhEUgAAB24AAAOgCAIAAAB6CMF2AAAQAElEQVR4nOzdC...
+[0-0] [Screenshot] Saved failure screenshot to: D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\reports\screenshots\TC_WEB_404___Role_Selection_page_allows_choosing_Patient_role_2026-08-02T04-21-34-425Z.png
+[0-0] unknown error in "Onboarding & Landing Page Flows.TC-WEB-404 | Role Selection page allows choosing Patient role"
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\00_Onboarding.test.js:61:9)
+[0-0] 2026-08-02T04:21:34.559Z INFO webdriver: COMMAND deleteSession()
+[0-0] 2026-08-02T04:21:34.563Z INFO webdriver: [DELETE] http://127.0.0.1:59607/session/f38aee5a2ceabb4b96304c9bf6cf0c38
+[0-6] 2026-08-02T04:21:34.858Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=63130 --allowed-origins=* --allowed-ips=0.0.0.0 in 1724ms on port 63130
+[0-7] 2026-08-02T04:21:35.110Z INFO @wdio/local-runner: Run worker command: run
+[0-6] 2026-08-02T04:21:35.590Z INFO webdriver: [POST] http://127.0.0.1:63130/session
+[0-6] 2026-08-02T04:21:35.590Z INFO webdriver: DATA {
+[0-6]   capabilities: {
+[0-6]     alwaysMatch: {
+[0-6]       browserName: 'chrome',
+[0-6]       acceptInsecureCerts: true,
+[0-6]       'goog:chromeOptions': [Object]
+[0-6]     },
+[0-6]     firstMatch: [ {} ]
+[0-6]   },
+[0-6]   desiredCapabilities: {
+[0-6]     browserName: 'chrome',
+[0-6]     acceptInsecureCerts: true,
+[0-6]     'goog:chromeOptions': {
+[0-6]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-6]       prefs: [Object],
+[0-6]       args: [Array]
+[0-6]     }
+[0-6]   }
+[0-6] }
+[0-5] 2026-08-02T04:21:37.027Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-5]   (Session info: chrome=150.0.7871.187)
+[0-5] 2026-08-02T04:21:37.027Z INFO webdriver: Retrying 3/3
+[0-5] 2026-08-02T04:21:37.027Z INFO webdriver: [POST] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526/url
+[0-5] 2026-08-02T04:21:37.027Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-6] 2026-08-02T04:21:37.210Z INFO webdriver: COMMAND deleteAllCookies()
+[0-6] 2026-08-02T04:21:37.226Z INFO webdriver: [DELETE] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/cookie
+[0-6] 2026-08-02T04:21:37.735Z INFO webdriver: RESULT null
+[0-6] [2026-08-02T04:21:37.736Z] INFO: Opening Auth Page for role: doctor
+[0-6] 2026-08-02T04:21:37.740Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-6] 2026-08-02T04:21:37.751Z INFO webdriver: [POST] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/url
+[0-6] 2026-08-02T04:21:37.751Z INFO webdriver: DATA { url: 'about:blank' }
+[0-6] 2026-08-02T04:21:37.895Z INFO webdriver: RESULT null
+[0-6] [2026-08-02T04:21:37.895Z] INFO: Navigating to URL: /#/auth?role=doctor
+[0-6] 2026-08-02T04:21:37.896Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=doctor")
+[0-6] 2026-08-02T04:21:37.914Z INFO webdriver: [POST] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/url
+[0-6] 2026-08-02T04:21:37.914Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-7] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/07_PatientManagement.test.js
+[0-7] 2026-08-02T04:21:39.159Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-5] 2026-08-02T04:21:41.521Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-5]   (Session info: chrome=150.0.7871.187)
+[0-5] unknown error in "Dashboard Module - Role Based Testing.Patient Dashboard."before all" hook: wrappedHook for "TC-WEB-056 | Patient Dashboard loads successfully with correct welcome message""
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\05_Dashboard.test.js:66:13)
+[0-5] 2026-08-02T04:21:41.530Z INFO webdriver: COMMAND deleteSession()
+[0-5] 2026-08-02T04:21:41.545Z INFO webdriver: [DELETE] http://127.0.0.1:62024/session/e1982a231fb241254a7dd840b5a3d526
+[0-7] 2026-08-02T04:21:42.984Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-8] 2026-08-02T04:21:43.307Z INFO @wdio/local-runner: Run worker command: run
+[0-7] 2026-08-02T04:21:43.396Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-7] 2026-08-02T04:21:43.459Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-7] 2026-08-02T04:21:43.690Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 49180
+[0-7] 2026-08-02T04:21:43.690Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-7] 2026-08-02T04:21:43.690Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-7] 2026-08-02T04:21:43.716Z INFO chromedriver: ChromeDriver was started successfully on port 49180.
+[0-7] 2026-08-02T04:21:44.534Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=49180 --allowed-origins=* --allowed-ips=0.0.0.0 in 1641ms on port 49180
+[0-7] 2026-08-02T04:21:45.314Z INFO webdriver: [POST] http://127.0.0.1:49180/session
+[0-7] 2026-08-02T04:21:45.314Z INFO webdriver: DATA {
+[0-7]   capabilities: {
+[0-7]     alwaysMatch: {
+[0-7]       browserName: 'chrome',
+[0-7]       acceptInsecureCerts: true,
+[0-7]       'goog:chromeOptions': [Object]
+[0-7]     },
+[0-7]     firstMatch: [ {} ]
+[0-7]   },
+[0-7]   desiredCapabilities: {
+[0-7]     browserName: 'chrome',
+[0-7]     acceptInsecureCerts: true,
+[0-7]     'goog:chromeOptions': {
+[0-7]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-7]       prefs: [Object],
+[0-7]       args: [Array]
+[0-7]     }
+[0-7]   }
+[0-7] }
+[0-8] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/08_UploadAnalysis.test.js
+[0-8] 2026-08-02T04:21:45.752Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-6] 2026-08-02T04:21:46.200Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-6]   (Session info: chrome=150.0.7871.187)
+[0-6] 2026-08-02T04:21:46.200Z INFO webdriver: Retrying 1/3
+[0-6] 2026-08-02T04:21:46.200Z INFO webdriver: [POST] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/url
+[0-6] 2026-08-02T04:21:46.200Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-7] 2026-08-02T04:21:46.971Z INFO webdriver: COMMAND deleteAllCookies()
+[0-7] 2026-08-02T04:21:47.001Z INFO webdriver: [DELETE] http://127.0.0.1:49180/session/231f3ce3e0e9c0700efad78d506edc12/cookie
+[0-7] 2026-08-02T04:21:47.355Z INFO webdriver: RESULT null
+[0-7] [2026-08-02T04:21:47.357Z] INFO: Opening Auth Page for role: doctor
+[0-7] 2026-08-02T04:21:47.360Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-7] 2026-08-02T04:21:47.368Z INFO webdriver: [POST] http://127.0.0.1:49180/session/231f3ce3e0e9c0700efad78d506edc12/url
+[0-7] 2026-08-02T04:21:47.369Z INFO webdriver: DATA { url: 'about:blank' }
+[0-7] 2026-08-02T04:21:47.538Z INFO webdriver: RESULT null
+[0-7] [2026-08-02T04:21:47.540Z] INFO: Navigating to URL: /#/auth?role=doctor
+[0-7] 2026-08-02T04:21:47.540Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=doctor")
+[0-7] 2026-08-02T04:21:47.560Z INFO webdriver: [POST] http://127.0.0.1:49180/session/231f3ce3e0e9c0700efad78d506edc12/url
+[0-7] 2026-08-02T04:21:47.560Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-8] 2026-08-02T04:21:48.748Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-8] 2026-08-02T04:21:49.111Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-8] 2026-08-02T04:21:49.158Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-8] 2026-08-02T04:21:49.241Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 49671
+[0-8] 2026-08-02T04:21:49.242Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-8] 2026-08-02T04:21:49.242Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-8] 2026-08-02T04:21:49.262Z INFO chromedriver: ChromeDriver was started successfully on port 49671.
+[0-8] 2026-08-02T04:21:50.210Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=49671 --allowed-origins=* --allowed-ips=0.0.0.0 in 1523ms on port 49671
+[0-6] 2026-08-02T04:21:50.719Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-6]   (Session info: chrome=150.0.7871.187)
+[0-6] 2026-08-02T04:21:50.719Z INFO webdriver: Retrying 2/3
+[0-6] 2026-08-02T04:21:50.720Z INFO webdriver: [POST] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/url
+[0-6] 2026-08-02T04:21:50.720Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-8] 2026-08-02T04:21:51.392Z INFO webdriver: [POST] http://127.0.0.1:49671/session
+[0-8] 2026-08-02T04:21:51.392Z INFO webdriver: DATA {
+[0-8]   capabilities: {
+[0-8]     alwaysMatch: {
+[0-8]       browserName: 'chrome',
+[0-8]       acceptInsecureCerts: true,
+[0-8]       'goog:chromeOptions': [Object]
+[0-8]     },
+[0-8]     firstMatch: [ {} ]
+[0-8]   },
+[0-8]   desiredCapabilities: {
+[0-8]     browserName: 'chrome',
+[0-8]     acceptInsecureCerts: true,
+[0-8]     'goog:chromeOptions': {
+[0-8]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-8]       prefs: [Object],
+[0-8]       args: [Array]
+[0-8]     }
+[0-8]   }
+[0-8] }
+[0-8] 2026-08-02T04:21:53.201Z INFO webdriver: COMMAND deleteAllCookies()
+[0-8] 2026-08-02T04:21:53.203Z INFO webdriver: [DELETE] http://127.0.0.1:49671/session/d2f22bec953a95b33a5448120488b08e/cookie
+[0-8] 2026-08-02T04:21:53.218Z INFO webdriver: RESULT null
+[0-8] [2026-08-02T04:21:53.221Z] INFO: Opening Auth Page for role: doctor
+[0-8] 2026-08-02T04:21:53.225Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-8] 2026-08-02T04:21:53.226Z INFO webdriver: [POST] http://127.0.0.1:49671/session/d2f22bec953a95b33a5448120488b08e/url
+[0-8] 2026-08-02T04:21:53.227Z INFO webdriver: DATA { url: 'about:blank' }
+[0-8] 2026-08-02T04:21:53.248Z INFO webdriver: RESULT null
+[0-8] [2026-08-02T04:21:53.249Z] INFO: Navigating to URL: /#/auth?role=doctor
+[0-8] 2026-08-02T04:21:53.249Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=doctor")
+[0-8] 2026-08-02T04:21:53.251Z INFO webdriver: [POST] http://127.0.0.1:49671/session/d2f22bec953a95b33a5448120488b08e/url
+[0-8] 2026-08-02T04:21:53.252Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-6] 2026-08-02T04:21:55.165Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-6]   (Session info: chrome=150.0.7871.187)
+[0-6] 2026-08-02T04:21:55.165Z INFO webdriver: Retrying 3/3
+[0-6] 2026-08-02T04:21:55.166Z INFO webdriver: [POST] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/url
+[0-6] 2026-08-02T04:21:55.166Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-7] 2026-08-02T04:21:56.791Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-7]   (Session info: chrome=150.0.7871.187)
+[0-7] 2026-08-02T04:21:56.791Z INFO webdriver: Retrying 1/3
+[0-7] 2026-08-02T04:21:56.792Z INFO webdriver: [POST] http://127.0.0.1:49180/session/231f3ce3e0e9c0700efad78d506edc12/url
+[0-7] 2026-08-02T04:21:56.792Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-8] 2026-08-02T04:22:00.259Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-8]   (Session info: chrome=150.0.7871.187)
+[0-8] 2026-08-02T04:22:00.259Z INFO webdriver: Retrying 1/3
+[0-8] 2026-08-02T04:22:00.259Z INFO webdriver: [POST] http://127.0.0.1:49671/session/d2f22bec953a95b33a5448120488b08e/url
+[0-8] 2026-08-02T04:22:00.259Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-0] 2026-08-02T04:22:01.549Z INFO webdriver: RESULT null
+[0-0] 2026-08-02T04:22:01.550Z INFO webdriver: Kill driver process with PID 12408
+[0-6] 2026-08-02T04:22:01.678Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-6]   (Session info: chrome=150.0.7871.187)
+[0-6] unknown error in "Navigation Module - Core Routing & Layout.Doctor Navigation Profile."before all" hook: wrappedHook for "TC-WEB-060 | Doctor sidebar contains all correct role-based modules""
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\06_Navigation.test.js:13:13)
+[0-6] 2026-08-02T04:22:01.696Z INFO webdriver: COMMAND deleteAllCookies()
+[0-6] 2026-08-02T04:22:01.700Z INFO webdriver: [DELETE] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/cookie
+[0-0] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/00_Onboarding.test.js
+2026-08-02T04:22:01.752Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2026-08-02T04:22:01.753Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:22:01.755Z INFO @wdio/local-runner: Start worker 0-9 with arg: run,./config/wdio.conf.js,--suite,web
+[0-6] 2026-08-02T04:22:01.781Z INFO webdriver: RESULT null
+[0-6] [2026-08-02T04:22:01.782Z] INFO: Opening Auth Page for role: patient
+[0-6] 2026-08-02T04:22:01.782Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-6] 2026-08-02T04:22:01.785Z INFO webdriver: [POST] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/url
+[0-6] 2026-08-02T04:22:01.785Z INFO webdriver: DATA { url: 'about:blank' }
+[0-6] 2026-08-02T04:22:01.977Z INFO webdriver: RESULT null
+[0-6] [2026-08-02T04:22:01.978Z] INFO: Navigating to URL: /#/auth?role=patient
+[0-6] 2026-08-02T04:22:01.978Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=patient")
+[0-6] 2026-08-02T04:22:01.980Z INFO webdriver: [POST] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/url
+[0-6] 2026-08-02T04:22:01.980Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-7] 2026-08-02T04:22:05.629Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-7]   (Session info: chrome=150.0.7871.187)
+[0-7] 2026-08-02T04:22:05.629Z INFO webdriver: Retrying 2/3
+[0-7] 2026-08-02T04:22:05.629Z INFO webdriver: [POST] http://127.0.0.1:49180/session/231f3ce3e0e9c0700efad78d506edc12/url
+[0-7] 2026-08-02T04:22:05.629Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-8] 2026-08-02T04:22:06.881Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-8]   (Session info: chrome=150.0.7871.187)
+[0-8] 2026-08-02T04:22:06.881Z INFO webdriver: Retrying 2/3
+[0-8] 2026-08-02T04:22:06.881Z INFO webdriver: [POST] http://127.0.0.1:49671/session/d2f22bec953a95b33a5448120488b08e/url
+[0-8] 2026-08-02T04:22:06.881Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-5] 2026-08-02T04:22:08.129Z INFO webdriver: RESULT null
+[0-5] 2026-08-02T04:22:08.130Z INFO webdriver: Kill driver process with PID 17100
+[0-5] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/05_Dashboard.test.js
+2026-08-02T04:22:08.307Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2026-08-02T04:22:08.308Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:22:08.310Z INFO @wdio/local-runner: Start worker 0-10 with arg: run,./config/wdio.conf.js,--suite,web
+[0-6] 2026-08-02T04:22:08.601Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-6]   (Session info: chrome=150.0.7871.187)
+[0-6] 2026-08-02T04:22:08.601Z INFO webdriver: Retrying 1/3
+[0-6] 2026-08-02T04:22:08.601Z INFO webdriver: [POST] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/url
+[0-6] 2026-08-02T04:22:08.601Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-7] 2026-08-02T04:22:09.988Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-7]   (Session info: chrome=150.0.7871.187)
+[0-7] 2026-08-02T04:22:09.988Z INFO webdriver: Retrying 3/3
+[0-7] 2026-08-02T04:22:09.988Z INFO webdriver: [POST] http://127.0.0.1:49180/session/231f3ce3e0e9c0700efad78d506edc12/url
+[0-7] 2026-08-02T04:22:09.988Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-8] 2026-08-02T04:22:11.402Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-8]   (Session info: chrome=150.0.7871.187)
+[0-8] 2026-08-02T04:22:11.402Z INFO webdriver: Retrying 3/3
+[0-8] 2026-08-02T04:22:11.402Z INFO webdriver: [POST] http://127.0.0.1:49671/session/d2f22bec953a95b33a5448120488b08e/url
+[0-8] 2026-08-02T04:22:11.402Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-6] 2026-08-02T04:22:12.938Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-6]   (Session info: chrome=150.0.7871.187)
+[0-6] 2026-08-02T04:22:12.939Z INFO webdriver: Retrying 2/3
+[0-6] 2026-08-02T04:22:12.939Z INFO webdriver: [POST] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/url
+[0-6] 2026-08-02T04:22:12.939Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-7] 2026-08-02T04:22:14.388Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-7]   (Session info: chrome=150.0.7871.187)
+[0-7] unknown error in "Patient Management Module."before all" hook: wrappedHook for "TC-WEB-101 | Patient Management page loads successfully with View tab active""
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\07_PatientManagement.test.js:13:9)
+[0-7] 2026-08-02T04:22:14.410Z INFO webdriver: COMMAND deleteSession()
+[0-7] 2026-08-02T04:22:14.418Z INFO webdriver: [DELETE] http://127.0.0.1:49180/session/231f3ce3e0e9c0700efad78d506edc12
+[0-9] 2026-08-02T04:22:17.410Z INFO @wdio/local-runner: Run worker command: run
+[0-6] 2026-08-02T04:22:17.549Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-6]   (Session info: chrome=150.0.7871.187)
+[0-6] 2026-08-02T04:22:17.549Z INFO webdriver: Retrying 3/3
+[0-6] 2026-08-02T04:22:17.549Z INFO webdriver: [POST] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057/url
+[0-6] 2026-08-02T04:22:17.549Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=patient' }
+[0-8] 2026-08-02T04:22:18.135Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-8]   (Session info: chrome=150.0.7871.187)
+[0-8] unknown error in "Dental Image Upload & AI Prediction."before all" hook: wrappedHook for "TC-WEB-176 | Upload zone is locked for Doctor until a patient is selected""
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\08_UploadAnalysis.test.js:22:9)
+[0-8] 2026-08-02T04:22:18.159Z INFO webdriver: COMMAND deleteSession()
+[0-8] 2026-08-02T04:22:18.168Z INFO webdriver: [DELETE] http://127.0.0.1:49671/session/d2f22bec953a95b33a5448120488b08e
+[0-9] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/09_Reports.test.js
+[0-9] 2026-08-02T04:22:19.878Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-9] 2026-08-02T04:22:21.826Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-6] 2026-08-02T04:22:21.926Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-6]   (Session info: chrome=150.0.7871.187)
+[0-6] unknown error in "Navigation Module - Core Routing & Layout.Patient Navigation Profile."before all" hook: wrappedHook for "TC-WEB-064 | Patient sidebar hides restricted modules (Patients management)""
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\06_Navigation.test.js:56:13)
+[0-6] 2026-08-02T04:22:21.933Z INFO webdriver: COMMAND deleteSession()
+[0-6] 2026-08-02T04:22:21.942Z INFO webdriver: [DELETE] http://127.0.0.1:63130/session/0924331c1fc7e99bc60295fe819c7057
+[0-10] 2026-08-02T04:22:22.037Z INFO @wdio/local-runner: Run worker command: run
+[0-9] 2026-08-02T04:22:22.278Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-9] 2026-08-02T04:22:22.335Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-9] 2026-08-02T04:22:22.446Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 63191
+[0-9] 2026-08-02T04:22:22.446Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-9] 2026-08-02T04:22:22.446Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-9] 2026-08-02T04:22:22.479Z INFO chromedriver: ChromeDriver was started successfully on port 63191.
+[0-9] 2026-08-02T04:22:23.385Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=63191 --allowed-origins=* --allowed-ips=0.0.0.0 in 1626ms on port 63191
+[0-10] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/10_Settings.test.js
+[0-10] 2026-08-02T04:22:23.944Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-9] 2026-08-02T04:22:24.026Z INFO webdriver: [POST] http://127.0.0.1:63191/session
+[0-9] 2026-08-02T04:22:24.027Z INFO webdriver: DATA {
+[0-9]   capabilities: {
+[0-9]     alwaysMatch: {
+[0-9]       browserName: 'chrome',
+[0-9]       acceptInsecureCerts: true,
+[0-9]       'goog:chromeOptions': [Object]
+[0-9]     },
+[0-9]     firstMatch: [ {} ]
+[0-9]   },
+[0-9]   desiredCapabilities: {
+[0-9]     browserName: 'chrome',
+[0-9]     acceptInsecureCerts: true,
+[0-9]     'goog:chromeOptions': {
+[0-9]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-9]       prefs: [Object],
+[0-9]       args: [Array]
+[0-9]     }
+[0-9]   }
+[0-9] }
+[0-9] 2026-08-02T04:22:25.335Z INFO webdriver: COMMAND deleteAllCookies()
+[0-9] 2026-08-02T04:22:25.337Z INFO webdriver: [DELETE] http://127.0.0.1:63191/session/d3652d8d3accc3fa5a3d0b416a23cf7e/cookie
+[0-9] 2026-08-02T04:22:25.441Z INFO webdriver: RESULT null
+[0-9] [2026-08-02T04:22:25.442Z] INFO: Opening Auth Page for role: doctor
+[0-9] 2026-08-02T04:22:25.445Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-9] 2026-08-02T04:22:25.448Z INFO webdriver: [POST] http://127.0.0.1:63191/session/d3652d8d3accc3fa5a3d0b416a23cf7e/url
+[0-9] 2026-08-02T04:22:25.448Z INFO webdriver: DATA { url: 'about:blank' }
+[0-9] 2026-08-02T04:22:25.518Z INFO webdriver: RESULT null
+[0-9] [2026-08-02T04:22:25.518Z] INFO: Navigating to URL: /#/auth?role=doctor
+[0-9] 2026-08-02T04:22:25.519Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=doctor")
+[0-9] 2026-08-02T04:22:25.521Z INFO webdriver: [POST] http://127.0.0.1:63191/session/d3652d8d3accc3fa5a3d0b416a23cf7e/url
+[0-9] 2026-08-02T04:22:25.521Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-10] 2026-08-02T04:22:26.425Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-10] 2026-08-02T04:22:26.781Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-10] 2026-08-02T04:22:26.831Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-10] 2026-08-02T04:22:26.915Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 56432
+[0-10] 2026-08-02T04:22:26.915Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-10] 2026-08-02T04:22:26.915Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-10] 2026-08-02T04:22:26.932Z INFO chromedriver: ChromeDriver was started successfully on port 56432.
+[0-10] 2026-08-02T04:22:27.881Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=56432 --allowed-origins=* --allowed-ips=0.0.0.0 in 1513ms on port 56432
+[0-10] 2026-08-02T04:22:28.421Z INFO webdriver: [POST] http://127.0.0.1:56432/session
+[0-10] 2026-08-02T04:22:28.421Z INFO webdriver: DATA {
+[0-10]   capabilities: {
+[0-10]     alwaysMatch: {
+[0-10]       browserName: 'chrome',
+[0-10]       acceptInsecureCerts: true,
+[0-10]       'goog:chromeOptions': [Object]
+[0-10]     },
+[0-10]     firstMatch: [ {} ]
+[0-10]   },
+[0-10]   desiredCapabilities: {
+[0-10]     browserName: 'chrome',
+[0-10]     acceptInsecureCerts: true,
+[0-10]     'goog:chromeOptions': {
+[0-10]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-10]       prefs: [Object],
+[0-10]       args: [Array]
+[0-10]     }
+[0-10]   }
+[0-10] }
+[0-10] 2026-08-02T04:22:29.657Z INFO webdriver: COMMAND deleteAllCookies()
+[0-10] 2026-08-02T04:22:29.662Z INFO webdriver: [DELETE] http://127.0.0.1:56432/session/fd8b7251c86b2a13f678d4665747ab40/cookie
+[0-10] 2026-08-02T04:22:29.736Z INFO webdriver: RESULT null
+[0-10] [2026-08-02T04:22:29.738Z] INFO: Opening Auth Page for role: doctor
+[0-10] 2026-08-02T04:22:29.742Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-10] 2026-08-02T04:22:29.744Z INFO webdriver: [POST] http://127.0.0.1:56432/session/fd8b7251c86b2a13f678d4665747ab40/url
+[0-10] 2026-08-02T04:22:29.744Z INFO webdriver: DATA { url: 'about:blank' }
+[0-10] 2026-08-02T04:22:29.797Z INFO webdriver: RESULT null
+[0-10] [2026-08-02T04:22:29.798Z] INFO: Navigating to URL: /#/auth?role=doctor
+[0-10] 2026-08-02T04:22:29.798Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=doctor")
+[0-10] 2026-08-02T04:22:29.802Z INFO webdriver: [POST] http://127.0.0.1:56432/session/fd8b7251c86b2a13f678d4665747ab40/url
+[0-10] 2026-08-02T04:22:29.803Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-10] 2026-08-02T04:22:36.399Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-10]   (Session info: chrome=150.0.7871.187)
+[0-10] 2026-08-02T04:22:36.400Z INFO webdriver: Retrying 1/3
+[0-10] 2026-08-02T04:22:36.400Z INFO webdriver: [POST] http://127.0.0.1:56432/session/fd8b7251c86b2a13f678d4665747ab40/url
+[0-10] 2026-08-02T04:22:36.400Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-10] 2026-08-02T04:22:40.857Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-10]   (Session info: chrome=150.0.7871.187)
+[0-10] 2026-08-02T04:22:40.858Z INFO webdriver: Retrying 2/3
+[0-10] 2026-08-02T04:22:40.858Z INFO webdriver: [POST] http://127.0.0.1:56432/session/fd8b7251c86b2a13f678d4665747ab40/url
+[0-10] 2026-08-02T04:22:40.858Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-9] 2026-08-02T04:22:44.602Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-9]   (Session info: chrome=150.0.7871.187)
+[0-9] 2026-08-02T04:22:44.602Z INFO webdriver: Retrying 1/3
+[0-9] 2026-08-02T04:22:44.602Z INFO webdriver: [POST] http://127.0.0.1:63191/session/d3652d8d3accc3fa5a3d0b416a23cf7e/url
+[0-9] 2026-08-02T04:22:44.602Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-10] 2026-08-02T04:22:45.374Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-10]   (Session info: chrome=150.0.7871.187)
+[0-10] 2026-08-02T04:22:45.374Z INFO webdriver: Retrying 3/3
+[0-10] 2026-08-02T04:22:45.374Z INFO webdriver: [POST] http://127.0.0.1:56432/session/fd8b7251c86b2a13f678d4665747ab40/url
+[0-10] 2026-08-02T04:22:45.375Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-9] 2026-08-02T04:22:49.048Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-9]   (Session info: chrome=150.0.7871.187)
+[0-9] 2026-08-02T04:22:49.048Z INFO webdriver: Retrying 2/3
+[0-9] 2026-08-02T04:22:49.048Z INFO webdriver: [POST] http://127.0.0.1:63191/session/d3652d8d3accc3fa5a3d0b416a23cf7e/url
+[0-9] 2026-08-02T04:22:49.048Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-10] 2026-08-02T04:22:49.888Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-10]   (Session info: chrome=150.0.7871.187)
+[0-10] unknown error in "Settings & Preferences Module."before all" hook: wrappedHook for "TC-WEB-280 | Settings page initializes with current user details""
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\10_Settings.test.js:12:9)
+[0-10] 2026-08-02T04:22:49.914Z INFO webdriver: COMMAND deleteSession()
+[0-10] 2026-08-02T04:22:49.919Z INFO webdriver: [DELETE] http://127.0.0.1:56432/session/fd8b7251c86b2a13f678d4665747ab40
+[0-9] 2026-08-02T04:22:53.418Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-9]   (Session info: chrome=150.0.7871.187)
+[0-9] 2026-08-02T04:22:53.418Z INFO webdriver: Retrying 3/3
+[0-9] 2026-08-02T04:22:53.418Z INFO webdriver: [POST] http://127.0.0.1:63191/session/d3652d8d3accc3fa5a3d0b416a23cf7e/url
+[0-9] 2026-08-02T04:22:53.418Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-9] 2026-08-02T04:22:58.468Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-9]   (Session info: chrome=150.0.7871.187)
+[0-9] unknown error in "Clinical Reports Module."before all" hook: wrappedHook for "TC-WEB-251 | Clinical Reports page title matches active portal view""
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\09_Reports.test.js:24:9)
+[0-9] 2026-08-02T04:22:58.494Z INFO webdriver: COMMAND deleteSession()
+[0-9] 2026-08-02T04:22:58.500Z INFO webdriver: [DELETE] http://127.0.0.1:63191/session/d3652d8d3accc3fa5a3d0b416a23cf7e
+[0-7] 2026-08-02T04:23:02.245Z INFO webdriver: RESULT null
+[0-7] 2026-08-02T04:23:02.246Z INFO webdriver: Kill driver process with PID 25348
+[0-7] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/07_PatientManagement.test.js
+2026-08-02T04:23:02.419Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2026-08-02T04:23:02.419Z INFO @wdio/cli:launcher: Run onWorkerStart hook
+2026-08-02T04:23:02.420Z INFO @wdio/local-runner: Start worker 0-11 with arg: run,./config/wdio.conf.js,--suite,web
+[0-8] 2026-08-02T04:23:09.309Z INFO webdriver: RESULT null
+[0-8] 2026-08-02T04:23:09.309Z INFO webdriver: Kill driver process with PID 24684
+[0-8] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/08_UploadAnalysis.test.js
+2026-08-02T04:23:09.521Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+[0-11] 2026-08-02T04:23:11.451Z INFO @wdio/local-runner: Run worker command: run
+[0-11] RUNNING in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/11_ResponsiveAndCompatibility.test.js
+[0-11] 2026-08-02T04:23:13.503Z INFO webdriver: Initiate new session using the WebDriver protocol
+[0-10] 2026-08-02T04:23:14.055Z INFO webdriver: RESULT null
+[0-10] 2026-08-02T04:23:14.055Z INFO webdriver: Kill driver process with PID 11308
+[0-10] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/10_Settings.test.js
+2026-08-02T04:23:14.224Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+[0-11] 2026-08-02T04:23:15.123Z INFO webdriver: Downloading Chromedriver v150.0.7871.187
+[0-11] 2026-08-02T04:23:15.542Z WARN webdriver: Chromedriver v150.0.7871.187 don't exist, trying to find known good 
+version...
+[0-11] 2026-08-02T04:23:15.682Z INFO webdriver: Download of Chromedriver v150.0.7871.124 was successful
+[0-11] 2026-08-02T04:23:15.799Z INFO chromedriver: Starting ChromeDriver 150.0.7871.124 (9261fd0a595ac4964ea84e6bd4a025c1173a2ffa-refs/branch-heads/7871@{#3359}) on port 49953
+[0-11] 2026-08-02T04:23:15.799Z INFO chromedriver: Remote connections are allowed by an allowlist (0.0.0.0).
+[0-11] 2026-08-02T04:23:15.799Z INFO chromedriver: Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+[0-11] 2026-08-02T04:23:15.819Z INFO chromedriver: ChromeDriver was started successfully on port 49953.
+[0-9] 2026-08-02T04:23:16.450Z INFO webdriver: RESULT null
+[0-9] 2026-08-02T04:23:16.450Z INFO webdriver: Kill driver process with PID 14956
+[0-9] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/09_Reports.test.js
+2026-08-02T04:23:16.636Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+[0-11] 2026-08-02T04:23:16.722Z INFO @wdio/utils: Started Chromedriver v150.0.7871.187 with params --port=49953 --allowed-origins=* --allowed-ips=0.0.0.0 in 1642ms on port 49953
+[0-11] 2026-08-02T04:23:17.254Z INFO webdriver: [POST] http://127.0.0.1:49953/session
+[0-11] 2026-08-02T04:23:17.254Z INFO webdriver: DATA {
+[0-11]   capabilities: {
+[0-11]     alwaysMatch: {
+[0-11]       browserName: 'chrome',
+[0-11]       acceptInsecureCerts: true,
+[0-11]       'goog:chromeOptions': [Object]
+[0-11]     },
+[0-11]     firstMatch: [ {} ]
+[0-11]   },
+[0-11]   desiredCapabilities: {
+[0-11]     browserName: 'chrome',
+[0-11]     acceptInsecureCerts: true,
+[0-11]     'goog:chromeOptions': {
+[0-11]       binary: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+[0-11]       prefs: [Object],
+[0-11]       args: [Array]
+[0-11]     }
+[0-11]   }
+[0-11] }
+[0-11] 2026-08-02T04:23:20.065Z INFO webdriver: COMMAND deleteAllCookies()
+[0-11] 2026-08-02T04:23:20.083Z INFO webdriver: [DELETE] http://127.0.0.1:49953/session/da651c53c59a435432389eeb01b34e88/cookie
+[0-11] 2026-08-02T04:23:20.336Z INFO webdriver: RESULT null
+[0-11] [2026-08-02T04:23:20.338Z] INFO: Opening Auth Page for role: doctor
+[0-11] 2026-08-02T04:23:20.340Z INFO webdriver: COMMAND navigateTo("about:blank")
+[0-11] 2026-08-02T04:23:20.350Z INFO webdriver: [POST] http://127.0.0.1:49953/session/da651c53c59a435432389eeb01b34e88/url
+[0-11] 2026-08-02T04:23:20.351Z INFO webdriver: DATA { url: 'about:blank' }
+[0-11] 2026-08-02T04:23:20.485Z INFO webdriver: RESULT null
+[0-11] [2026-08-02T04:23:20.485Z] INFO: Navigating to URL: /#/auth?role=doctor
+[0-11] 2026-08-02T04:23:20.486Z INFO webdriver: COMMAND navigateTo("http://127.0.0.1:5173/#/auth?role=doctor")
+[0-11] 2026-08-02T04:23:20.497Z INFO webdriver: [POST] http://127.0.0.1:49953/session/da651c53c59a435432389eeb01b34e88/url
+[0-11] 2026-08-02T04:23:20.497Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-6] 2026-08-02T04:23:21.956Z INFO webdriver: RESULT null
+[0-6] 2026-08-02T04:23:21.956Z INFO webdriver: Kill driver process with PID 2068
+[0-6] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/06_Navigation.test.js
+2026-08-02T04:23:22.387Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+[0-11] 2026-08-02T04:23:27.143Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-11] 2026-08-02T04:23:27.143Z INFO webdriver: Retrying 1/3
+[0-11]   (Session info: chrome=150.0.7871.187)
+[0-11] 2026-08-02T04:23:27.143Z INFO webdriver: [POST] http://127.0.0.1:49953/session/da651c53c59a435432389eeb01b34e88/url
+[0-11] 2026-08-02T04:23:27.143Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-11] 2026-08-02T04:23:31.595Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-11]   (Session info: chrome=150.0.7871.187)
+[0-11] 2026-08-02T04:23:31.596Z INFO webdriver: Retrying 2/3
+[0-11] 2026-08-02T04:23:31.596Z INFO webdriver: [POST] http://127.0.0.1:49953/session/da651c53c59a435432389eeb01b34e88/url
+[0-11] 2026-08-02T04:23:31.596Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-11] 2026-08-02T04:23:36.050Z WARN webdriver: Request failed with status 500 due to unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-11]   (Session info: chrome=150.0.7871.187)
+[0-11] 2026-08-02T04:23:36.050Z INFO webdriver: Retrying 3/3
+[0-11] 2026-08-02T04:23:36.050Z INFO webdriver: [POST] http://127.0.0.1:49953/session/da651c53c59a435432389eeb01b34e88/url
+[0-11] 2026-08-02T04:23:36.050Z INFO webdriver: DATA { url: 'http://127.0.0.1:5173/#/auth?role=doctor' }
+[0-11] 2026-08-02T04:23:40.490Z ERROR webdriver: Request failed with status 500 due to unknown error: unknown error: 
+net::ERR_CONNECTION_REFUSED
+[0-11]   (Session info: chrome=150.0.7871.187)
+[0-11] unknown error in "Responsive Design & Screen Layout Compatibility."before all" hook: wrappedHook for "TC-WEB-301 | Desktop layout displays vertical sidebar with user profile""
+unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+    at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+    at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\11_ResponsiveAndCompatibility.test.js:12:9)
+[0-11] 2026-08-02T04:23:40.513Z INFO webdriver: COMMAND deleteSession()
+[0-11] 2026-08-02T04:23:40.526Z INFO webdriver: [DELETE] http://127.0.0.1:49953/session/da651c53c59a435432389eeb01b34e88
+[0-11] 2026-08-02T04:23:49.950Z INFO webdriver: RESULT null
+[0-11] 2026-08-02T04:23:49.950Z INFO webdriver: Kill driver process with PID 18612
+[0-11] FAILED in chrome - file:///D:/Prophydent/project%205%20(5)/project%205/qa-automation/selenium/tests/web/11_ResponsiveAndCompatibility.test.js
+2026-08-02T04:23:50.121Z INFO @wdio/cli:launcher: Run onWorkerEnd hook
+2026-08-02T04:23:50.123Z INFO @wdio/cli:launcher: Run onComplete hook
+
+ "spec" Reporter:
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-2] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-2] Session ID: 962446eddb98c82ade8824f21b248e6a
+[chrome 150.0.7871.187 windows #0-2]
+[chrome 150.0.7871.187 windows #0-2] » \tests\web\02_Auth_Login_Patient.test.js
+[chrome 150.0.7871.187 windows #0-2] Authentication - Patient Login
+[chrome 150.0.7871.187 windows #0-2]    ? TC-WEB-017 | Patient login succeeds with valid Gmail address credentials
+[chrome 150.0.7871.187 windows #0-2]    ✖ "before each" hook for Authentication - Patient Login
+[chrome 150.0.7871.187 windows #0-2]
+[chrome 150.0.7871.187 windows #0-2] 1 failing (49.9s)
+[chrome 150.0.7871.187 windows #0-2]
+[chrome 150.0.7871.187 windows #0-2] 1) Authentication - Patient Login "before each" hook for Authentication - Patient Login
+[chrome 150.0.7871.187 windows #0-2] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-2] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-2]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-2]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-2]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\02_Auth_Login_Patient.test.js:11:9)
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-4] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-4] Session ID: 57aa8eccf14c11dacc122b8039bdcfe4
+[chrome 150.0.7871.187 windows #0-4]
+[chrome 150.0.7871.187 windows #0-4] » \tests\web\04_Auth_Registration_Patient.test.js
+[chrome 150.0.7871.187 windows #0-4] Authentication - Patient Registration
+[chrome 150.0.7871.187 windows #0-4]    ? TC-WEB-032 | Patient registration succeeds with valid Gmail address and all fields
+[chrome 150.0.7871.187 windows #0-4]    ✖ "before each" hook for Authentication - Patient Registration
+[chrome 150.0.7871.187 windows #0-4]
+[chrome 150.0.7871.187 windows #0-4] 1 failing (1m 14.6s)
+[chrome 150.0.7871.187 windows #0-4]
+[chrome 150.0.7871.187 windows #0-4] 1) Authentication - Patient Registration "before each" hook for Authentication - Patient Registration
+[chrome 150.0.7871.187 windows #0-4] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-4] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-4]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-4]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-4]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\04_Auth_Registration_Patient.test.js:10:9)
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-1] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-1] Session ID: 5aa8e5c5f2c1d3f6e504d575bb0862bf
+[chrome 150.0.7871.187 windows #0-1]
+[chrome 150.0.7871.187 windows #0-1] » \tests\web\01_Auth_Login_Doctor.test.js
+[chrome 150.0.7871.187 windows #0-1] Authentication - Doctor Login
+[chrome 150.0.7871.187 windows #0-1]    ? TC-WEB-001 | Doctor login succeeds with valid ProphyDent domain credentials
+[chrome 150.0.7871.187 windows #0-1]    ✖ "before each" hook for Authentication - Doctor Login
+[chrome 150.0.7871.187 windows #0-1]
+[chrome 150.0.7871.187 windows #0-1] 1 failing (1m 25.1s)
+[chrome 150.0.7871.187 windows #0-1]
+[chrome 150.0.7871.187 windows #0-1] 1) Authentication - Doctor Login "before each" hook for Authentication - Doctor Login
+[chrome 150.0.7871.187 windows #0-1] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-1] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-1]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-1]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-1]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\01_Auth_Login_Doctor.test.js:13:9)
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-3] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-3] Session ID: 8197e4ed1a298e27975aa2b2a741b782
+[chrome 150.0.7871.187 windows #0-3]
+[chrome 150.0.7871.187 windows #0-3] » \tests\web\03_Auth_Registration_Doctor.test.js
+[chrome 150.0.7871.187 windows #0-3] Authentication - Doctor Registration
+[chrome 150.0.7871.187 windows #0-3]    ? TC-WEB-026 | Doctor registration succeeds with valid ProphyDent domain email and all fields
+[chrome 150.0.7871.187 windows #0-3]    ✖ "before each" hook for Authentication - Doctor Registration
+[chrome 150.0.7871.187 windows #0-3]
+[chrome 150.0.7871.187 windows #0-3] 1 failing (1m 30.5s)
+[chrome 150.0.7871.187 windows #0-3]
+[chrome 150.0.7871.187 windows #0-3] 1) Authentication - Doctor Registration "before each" hook for Authentication - Doctor Registration
+[chrome 150.0.7871.187 windows #0-3] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-3] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-3]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-3]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-3]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\03_Auth_Registration_Doctor.test.js:10:9)
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-0] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-0] Session ID: f38aee5a2ceabb4b96304c9bf6cf0c38
+[chrome 150.0.7871.187 windows #0-0]
+[chrome 150.0.7871.187 windows #0-0] » \tests\web\00_Onboarding.test.js
+[chrome 150.0.7871.187 windows #0-0] Onboarding & Landing Page Flows
+[chrome 150.0.7871.187 windows #0-0]    ✖ TC-WEB-401 | Splash screen displays loader and transitions to welcome page
+[chrome 150.0.7871.187 windows #0-0]    ✖ TC-WEB-402 | Welcome page displays title and allows navigating to role selection
+[chrome 150.0.7871.187 windows #0-0]    ✖ TC-WEB-403 | Role Selection page allows choosing Doctor role
+[chrome 150.0.7871.187 windows #0-0]    ✖ TC-WEB-404 | Role Selection page allows choosing Patient role
+[chrome 150.0.7871.187 windows #0-0]
+[chrome 150.0.7871.187 windows #0-0] 4 failing (2m 4.4s)
+[chrome 150.0.7871.187 windows #0-0]
+[chrome 150.0.7871.187 windows #0-0] 1) Onboarding & Landing Page Flows TC-WEB-401 | Splash screen displays loader and transitions to welcome page
+[chrome 150.0.7871.187 windows #0-0] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-0] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-0]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-0]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\00_Onboarding.test.js:15:9)
+[chrome 150.0.7871.187 windows #0-0]
+[chrome 150.0.7871.187 windows #0-0] 2) Onboarding & Landing Page Flows TC-WEB-402 | Welcome page displays title and allows navigating to role selection
+[chrome 150.0.7871.187 windows #0-0] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-0] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-0]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-0]     at async OnboardingPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\OnboardingPage.js:33:9)
+[chrome 150.0.7871.187 windows #0-0]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\00_Onboarding.test.js:32:9)
+[chrome 150.0.7871.187 windows #0-0]
+[chrome 150.0.7871.187 windows #0-0] 3) Onboarding & Landing Page Flows TC-WEB-403 | Role Selection page allows choosing Doctor role
+[chrome 150.0.7871.187 windows #0-0] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-0] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-0]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-0]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\00_Onboarding.test.js:45:9)
+[chrome 150.0.7871.187 windows #0-0]
+[chrome 150.0.7871.187 windows #0-0] 4) Onboarding & Landing Page Flows TC-WEB-404 | Role Selection page allows choosing Patient role
+[chrome 150.0.7871.187 windows #0-0] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-0] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-0]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-0]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\00_Onboarding.test.js:61:9)
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-5] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-5] Session ID: e1982a231fb241254a7dd840b5a3d526
+[chrome 150.0.7871.187 windows #0-5]
+[chrome 150.0.7871.187 windows #0-5] » \tests\web\05_Dashboard.test.js
+[chrome 150.0.7871.187 windows #0-5] Dashboard Module - Role Based Testing
+[chrome 150.0.7871.187 windows #0-5]     Doctor Dashboard
+[chrome 150.0.7871.187 windows #0-5]        ✖ "before all" hook for Doctor Dashboard
+[chrome 150.0.7871.187 windows #0-5]
+[chrome 150.0.7871.187 windows #0-5]     Patient Dashboard
+[chrome 150.0.7871.187 windows #0-5]        ✖ "before all" hook for Patient Dashboard
+[chrome 150.0.7871.187 windows #0-5]
+[chrome 150.0.7871.187 windows #0-5] 2 failing (1m 9.3s)
+[chrome 150.0.7871.187 windows #0-5]
+[chrome 150.0.7871.187 windows #0-5] 1) Doctor Dashboard "before all" hook for Doctor Dashboard
+[chrome 150.0.7871.187 windows #0-5] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-5] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-5]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-5]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-5]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\05_Dashboard.test.js:17:13)
+[chrome 150.0.7871.187 windows #0-5]
+[chrome 150.0.7871.187 windows #0-5] 2) Patient Dashboard "before all" hook for Patient Dashboard
+[chrome 150.0.7871.187 windows #0-5] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-5] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-5]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-5]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-5]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\05_Dashboard.test.js:66:13)
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-7] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-7] Session ID: 231f3ce3e0e9c0700efad78d506edc12
+[chrome 150.0.7871.187 windows #0-7]
+[chrome 150.0.7871.187 windows #0-7] » \tests\web\07_PatientManagement.test.js
+[chrome 150.0.7871.187 windows #0-7] Patient Management Module
+[chrome 150.0.7871.187 windows #0-7]    ✖ "before all" hook for Patient Management Module
+[chrome 150.0.7871.187 windows #0-7]
+[chrome 150.0.7871.187 windows #0-7] 1 failing (1m 15.2s)
+[chrome 150.0.7871.187 windows #0-7]
+[chrome 150.0.7871.187 windows #0-7] 1) Patient Management Module "before all" hook for Patient Management Module
+[chrome 150.0.7871.187 windows #0-7] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-7] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-7]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-7]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-7]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\07_PatientManagement.test.js:13:9)
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-8] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-8] Session ID: d2f22bec953a95b33a5448120488b08e
+[chrome 150.0.7871.187 windows #0-8]
+[chrome 150.0.7871.187 windows #0-8] » \tests\web\08_UploadAnalysis.test.js
+[chrome 150.0.7871.187 windows #0-8] Dental Image Upload & AI Prediction
+[chrome 150.0.7871.187 windows #0-8]    ✖ "before all" hook for Dental Image Upload & AI Prediction
+[chrome 150.0.7871.187 windows #0-8]
+[chrome 150.0.7871.187 windows #0-8] 1 failing (1m 16.1s)
+[chrome 150.0.7871.187 windows #0-8]
+[chrome 150.0.7871.187 windows #0-8] 1) Dental Image Upload & AI Prediction "before all" hook for Dental Image Upload & AI Prediction
+[chrome 150.0.7871.187 windows #0-8] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-8] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-8]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-8]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-8]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\08_UploadAnalysis.test.js:22:9)
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-10] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-10] Session ID: fd8b7251c86b2a13f678d4665747ab40
+[chrome 150.0.7871.187 windows #0-10]
+[chrome 150.0.7871.187 windows #0-10] » \tests\web\10_Settings.test.js
+[chrome 150.0.7871.187 windows #0-10] Settings & Preferences Module
+[chrome 150.0.7871.187 windows #0-10]    ✖ "before all" hook for Settings & Preferences Module
+[chrome 150.0.7871.187 windows #0-10]
+[chrome 150.0.7871.187 windows #0-10] 1 failing (44.4s)
+[chrome 150.0.7871.187 windows #0-10]
+[chrome 150.0.7871.187 windows #0-10] 1) Settings & Preferences Module "before all" hook for Settings & Preferences Module
+[chrome 150.0.7871.187 windows #0-10] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-10] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-10]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-10]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-10]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\10_Settings.test.js:12:9)
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-9] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-9] Session ID: d3652d8d3accc3fa5a3d0b416a23cf7e
+[chrome 150.0.7871.187 windows #0-9]
+[chrome 150.0.7871.187 windows #0-9] » \tests\web\09_Reports.test.js
+[chrome 150.0.7871.187 windows #0-9] Clinical Reports Module
+[chrome 150.0.7871.187 windows #0-9]    ✖ "before all" hook for Clinical Reports Module
+[chrome 150.0.7871.187 windows #0-9]
+[chrome 150.0.7871.187 windows #0-9] 1 failing (51.1s)
+[chrome 150.0.7871.187 windows #0-9]
+[chrome 150.0.7871.187 windows #0-9] 1) Clinical Reports Module "before all" hook for Clinical Reports Module
+[chrome 150.0.7871.187 windows #0-9] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-9] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-9]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-9]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-9]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\09_Reports.test.js:24:9)
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-6] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-6] Session ID: 0924331c1fc7e99bc60295fe819c7057
+[chrome 150.0.7871.187 windows #0-6]
+[chrome 150.0.7871.187 windows #0-6] » \tests\web\06_Navigation.test.js
+[chrome 150.0.7871.187 windows #0-6] Navigation Module - Core Routing & Layout
+[chrome 150.0.7871.187 windows #0-6]     Doctor Navigation Profile
+[chrome 150.0.7871.187 windows #0-6]        ✖ "before all" hook for Doctor Navigation Profile
+[chrome 150.0.7871.187 windows #0-6]
+[chrome 150.0.7871.187 windows #0-6]     Patient Navigation Profile
+[chrome 150.0.7871.187 windows #0-6]        ✖ "before all" hook for Patient Navigation Profile
+[chrome 150.0.7871.187 windows #0-6]
+[chrome 150.0.7871.187 windows #0-6] 2 failing (1m 44.7s)
+[chrome 150.0.7871.187 windows #0-6]
+[chrome 150.0.7871.187 windows #0-6] 1) Doctor Navigation Profile "before all" hook for Doctor Navigation Profile
+[chrome 150.0.7871.187 windows #0-6] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-6] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-6]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-6]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-6]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\06_Navigation.test.js:13:13)
+[chrome 150.0.7871.187 windows #0-6]
+[chrome 150.0.7871.187 windows #0-6] 2) Patient Navigation Profile "before all" hook for Patient Navigation Profile
+[chrome 150.0.7871.187 windows #0-6] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-6] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-6]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-6]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-6]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\06_Navigation.test.js:56:13)
+------------------------------------------------------------------
+[chrome 150.0.7871.187 windows #0-11] Running: chrome (v150.0.7871.187) on windows
+[chrome 150.0.7871.187 windows #0-11] Session ID: da651c53c59a435432389eeb01b34e88
+[chrome 150.0.7871.187 windows #0-11]
+[chrome 150.0.7871.187 windows #0-11] » \tests\web\11_ResponsiveAndCompatibility.test.js
+[chrome 150.0.7871.187 windows #0-11] Responsive Design & Screen Layout Compatibility
+[chrome 150.0.7871.187 windows #0-11]    ✖ "before all" hook for Responsive Design & Screen Layout Compatibility
+[chrome 150.0.7871.187 windows #0-11]
+[chrome 150.0.7871.187 windows #0-11] 1 failing (29.8s)
+[chrome 150.0.7871.187 windows #0-11]
+[chrome 150.0.7871.187 windows #0-11] 1) Responsive Design & Screen Layout Compatibility "before all" hook for Responsive Design & Screen Layout Compatibility
+[chrome 150.0.7871.187 windows #0-11] unknown error: net::ERR_CONNECTION_REFUSED
+  (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-11] unknown error: unknown error: net::ERR_CONNECTION_REFUSED
+[chrome 150.0.7871.187 windows #0-11]   (Session info: chrome=150.0.7871.187)
+[chrome 150.0.7871.187 windows #0-11]     at async AuthPage.open (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\src\pages\AuthPage.js:38:9)
+[chrome 150.0.7871.187 windows #0-11]     at async Context.<anonymous> (D:\Prophydent\project 5 (5)\project 5\qa-automation\selenium\tests\web\11_ResponsiveAndCompatibility.test.js:12:9)
+
+
+Spec Files:	 0 passed, 12 failed, 12 total (100% completed) in 00:05:03  
+
+2026-08-02T04:23:50.145Z INFO @wdio/local-runner: Shutting down spawned worker
+2026-08-02T04:23:50.404Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2026-08-02T04:23:50.405Z INFO @wdio/local-runner: shutting down

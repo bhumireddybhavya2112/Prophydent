@@ -70,10 +70,13 @@ class UploadAnalysisPage extends BasePage {
      */
     async uploadImage(localFilePath) {
         logger.info(`Uploading image from path: ${localFilePath}`);
-        await this.inputFile.waitForExist({ timeout: 5000 });
-        // In WebdriverIO, if the input is hidden, we use execute to unhide it or just set value directly
+        // Wait for the upload zone to exist (it appears after patient selection)
+        await this.uploadZone.waitForExist({ timeout: 15000 });
+        // Wait for the file input to exist (it's inside the upload zone)
+        await this.inputFile.waitForExist({ timeout: 15000 });
         await browser.execute(function() {
-            document.getElementById('file-upload').style.display = 'block';
+            const input = document.getElementById('file-upload');
+            if (input) input.style.display = 'block';
         });
         
         await this.inputFile.setValue(localFilePath);

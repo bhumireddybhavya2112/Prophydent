@@ -11,7 +11,7 @@ class AuthPage extends BasePage {
     get backBtn() { return $('.back-btn'); }
     
     // Form Inputs
-    get inputEmail() { return $('input[type="email"]'); }
+    get inputEmail() { return $('input[type="text"][placeholder*="@"]'); }
     get inputPassword() { return $('input[type="password"]'); }
     get inputFullName() { return $('input[type="text"][placeholder*="Doe"]'); }
     get inputMobile() { return $('input[type="tel"]'); }

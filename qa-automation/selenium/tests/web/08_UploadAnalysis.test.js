@@ -112,8 +112,11 @@ describe('Dental Image Upload & AI Prediction', function () {
         await UploadAnalysisPage.selectFirstPatient();
         try {
             await UploadAnalysisPage.uploadImage(txtPath);
-            // Wait to see if scanning state triggers
+            // Wait to see if scanning state triggers or alert pops up
             await browser.pause(2000);
+            if (await browser.isAlertOpen()) {
+                await browser.acceptAlert();
+            }
             const isScanning = await UploadAnalysisPage.scanningState.isDisplayed();
             // In many JS implementations, FileReader throws on non-images or accepts it but backend fails.
             // Just verifying it doesn't crash the UI.

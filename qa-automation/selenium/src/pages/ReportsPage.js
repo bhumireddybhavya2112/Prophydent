@@ -34,7 +34,23 @@ class ReportsPage extends BasePage {
     async open() {
         logger.info('Navigating to Reports Page');
         await super.open('reports');
-        await this.waitForElement(this.pageTitle);
+        try {
+            await this.waitForElement(this.pageTitle);
+        } catch (e) {
+            const fs = require('fs');
+            const path = require('path');
+            const reportsDir = path.join(__dirname, '../reports/screenshots');
+            if (!fs.existsSync(reportsDir)) fs.mkdirSync(reportsDir, { recursive: true });
+            const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
+            const screenshotPath = path.join(reportsDir, `TC_WEB_254_debug_${timestamp}.png`);
+            const pageSource = await browser.getPageSource();
+            const sourcePath = path.join(reportsDir, `TC_WEB_254_debug_${timestamp}.html`);
+            fs.writeFileSync(screenshotPath, await browser.takeScreenshot(), 'base64');
+            fs.writeFileSync(sourcePath, pageSource);
+            console.log(`[DEBUG TC-WEB-254] Screenshot: ${screenshotPath}`);
+            console.log(`[DEBUG TC-WEB-254] PageSource: ${sourcePath}`);
+            throw e;
+        }
     }
 
     /**

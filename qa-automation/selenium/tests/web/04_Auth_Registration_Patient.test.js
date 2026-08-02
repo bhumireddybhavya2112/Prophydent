@@ -90,8 +90,10 @@ describe('Authentication - Patient Registration', function () {
 
     it('TC-WEB-035 | Registration form displays gender dropdown with expected options', async () => {
         logger.info('Executing TC-WEB-035');
-        const options = await AuthPage.selectGender.$$('option');
-        const values = await Promise.all(options.map(opt => opt.getAttribute('value')));
+        await AuthPage.waitForElement(AuthPage.selectGender, 10000);
+        const select = await AuthPage.selectGender;
+        const optionElements = await select.$$('option');
+        const values = await Promise.all(Array.from(optionElements).map(async (opt) => await opt.getAttribute('value')));
         
         expect(values).to.include.members(['male', 'female', 'other', 'prefer_not_to_say']);
     });

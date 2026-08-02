@@ -58,13 +58,27 @@ export default function Auth() {
     reader.readAsDataURL(file);
   };
 
+  const genderOptions = [
+    { value: 'male', label: 'Male' },
+    { value: 'female', label: 'Female' },
+    { value: 'other', label: 'Other' },
+    { value: 'prefer_not_to_say', label: 'Prefer not to say' }
+  ];
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     setErrorMsg('');
     
     try {
+      // Check for leading/trailing whitespace in email
       if (email !== email.trim()) {
+        throw new Error('Invalid login credentials.');
+      }
+      
+      // Validate email format (since we changed from type="email" to type="text")
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
         throw new Error('Invalid login credentials.');
       }
 
@@ -133,7 +147,7 @@ export default function Auth() {
           </div>
         )}
 
-        <form className="auth-form" onSubmit={handleSubmit}>
+        <form className="auth-form" onSubmit={handleSubmit} noValidate>
           {!isLogin && (
             <>
               <div className="form-group" style={{ marginBottom: '1rem', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
@@ -189,10 +203,9 @@ export default function Auth() {
                   onChange={(e) => setGender(e.target.value)}
                   style={{ padding: '0.75rem 1rem', borderRadius: 'var(--radius-md)', border: '1px solid var(--color-border)', fontFamily: 'inherit', background: 'var(--color-bg-main)', color: 'var(--color-text-main)' }}
                 >
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="other">Other</option>
-                  <option value="prefer_not_to_say">Prefer not to say</option>
+                  {genderOptions.map(opt => (
+                    <option key={opt.value} value={opt.value}>{opt.label}</option>
+                  ))}
                 </select>
               </div>
             </>
@@ -201,7 +214,7 @@ export default function Auth() {
           <div className="form-group">
             <label>Email Address</label>
             <input 
-              type="email" 
+              type="text"
               placeholder={role === 'doctor' ? "example.lmt@prophydent.com" : "jane.doe@example.com"} 
               value={email}
               onChange={(e) => setEmail(e.target.value)}

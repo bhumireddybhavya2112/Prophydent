@@ -104,6 +104,10 @@ export default function UploadAnalysis({ onNavigate }) {
   };
 
   const handleFile = (uploadedFile) => {
+    if (!uploadedFile.type.startsWith('image/')) {
+      alert("Unsupported file type. Please upload an image or DICOM file.");
+      return;
+    }
     const reader = new FileReader();
     reader.onload = (e) => {
       setFile(e.target.result);
