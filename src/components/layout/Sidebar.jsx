@@ -12,18 +12,41 @@ const navItems = [
   { icon: Settings, label: 'Settings', path: '/settings', roles: ['doctor', 'patient'] }
 ];
 
+const getInitialProfile = () => {
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.includes('auth-token')) {
+        const item = JSON.parse(localStorage.getItem(key));
+        const user = item?.user || item?.currentSession?.user;
+        if (user) {
+          const role = user.user_metadata?.role || 'doctor';
+          return {
+            name: user.user_metadata?.full_name || 'User',
+            role: role,
+            displayRole: role === 'patient' ? 'Patient' : 'Dentist',
+            avatar: user.user_metadata?.avatar || null
+          };
+        }
+      }
+    }
+  } catch (e) {}
+  return { name: 'User', role: null, displayRole: '' };
+};
+
 export default function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [profile, setProfile] = useState({ name: 'User', role: 'doctor', displayRole: 'Dentist' });
+  const [profile, setProfile] = useState(getInitialProfile);
 
   useEffect(() => {
     supabase.auth.getUser().then(({ data: { user } }) => {
       if (user) {
+        const role = user.user_metadata?.role || 'doctor';
         setProfile({
           name: user.user_metadata?.full_name || 'User',
-          role: user.user_metadata?.role || 'doctor',
-          displayRole: user.user_metadata?.role === 'patient' ? 'Patient' : 'Dentist',
+          role: role,
+          displayRole: role === 'patient' ? 'Patient' : 'Dentist',
           avatar: user.user_metadata?.avatar || null
         });
       }

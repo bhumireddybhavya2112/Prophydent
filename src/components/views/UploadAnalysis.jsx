@@ -273,7 +273,12 @@ export default function UploadAnalysis({ onNavigate }) {
             <label>Select Patient</label>
             <select 
               value={selectedPatientId} 
-              onChange={(e) => setSelectedPatientId(e.target.value)}
+              onChange={(e) => {
+                setSelectedPatientId(e.target.value);
+                setFile(null);
+                setStatus('idle');
+                setAnalysisResults(null);
+              }}
               disabled={loadingPatients}
             >
               <option value="">-- Choose a patient --</option>

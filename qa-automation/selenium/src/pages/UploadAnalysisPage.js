@@ -41,6 +41,7 @@ class UploadAnalysisPage extends BasePage {
     async open() {
         logger.info('Navigating to Upload & Analysis Page');
         await super.open('analysis');
+        await browser.refresh();
         await this.waitForElement(this.pageHeader);
     }
 
