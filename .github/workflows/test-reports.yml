@@ -165,7 +165,7 @@ jobs:
         run: python ml-engine/server.py &
 
       - name: Start Appium Server
-        run: appium --log appium.log &
+        run: appium --allow-insecure chromedriver_autodownload --log appium.log &
 
       - name: Run Appium Tests in Android Emulator
         uses: reactivecircus/android-emulator-runner@v2

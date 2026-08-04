@@ -23,6 +23,7 @@ def driver():
     options.set_capability("appPackage", "com.prophydent.app")
     options.set_capability("appActivity", ".MainActivity")
     options.set_capability("noReset", True)
+    options.set_capability("appium:chromedriverAutodownload", True)
     
     # Establish connection to the local Appium server
     driver = webdriver.Remote("http://127.0.0.1:4723", options=options)
