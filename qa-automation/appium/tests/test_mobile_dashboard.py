@@ -9,7 +9,7 @@ def authenticated_doctor_driver(driver, credentials):
     """Fixture to ensure the driver is logged in as a doctor before test runs"""
     auth_page = MobileAuthPage(driver)
 
-    driver.get("http://localhost:5173/#/auth?role=doctor")
+    driver.get("http://127.0.0.1:5173/#/auth?role=doctor")
     
     doctor_creds = credentials.get("users", {}).get("doctor", {}).get("valid", {})
     auth_page.login(doctor_creds.get("email"), doctor_creds.get("password"))
@@ -47,7 +47,7 @@ def test_tc_mob_222_native_camera_photo_capture(authenticated_doctor_driver):
     """TC-MOB-222 | Native camera photo capture handles permissions and confirms picture"""
     upload_page = MobileUploadAnalysisPage(authenticated_doctor_driver)
 
-    authenticated_doctor_driver.get("http://localhost:5173/#/analysis")
+    authenticated_doctor_driver.get("http://127.0.0.1:5173/#/analysis")
     
     upload_page.select_first_patient()
     upload_page.capture_image_from_native_camera()
@@ -60,7 +60,7 @@ def test_tc_mob_223_native_gallery_selection(authenticated_doctor_driver):
     """TC-MOB-223 | Gallery image selection picker picks first native thumbnail item"""
     upload_page = MobileUploadAnalysisPage(authenticated_doctor_driver)
 
-    authenticated_doctor_driver.get("http://localhost:5173/#/analysis")
+    authenticated_doctor_driver.get("http://127.0.0.1:5173/#/analysis")
     
     upload_page.select_first_patient()
     upload_page.select_image_from_native_gallery()

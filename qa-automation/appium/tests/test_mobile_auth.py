@@ -7,7 +7,7 @@ def test_tc_mob_001_splash_loader_transitions(driver):
     """TC-MOB-001 | Splash screen loader transitions to welcome page successfully"""
     auth_page = MobileAuthPage(driver)
 
-    driver.get("http://localhost:5173/")
+    driver.get("http://127.0.0.1:5173/")
     
     splash = auth_page.wait_for_element(By.CSS_SELECTOR, '.splash-screen')
     assert splash.is_displayed()
@@ -22,7 +22,7 @@ def test_tc_mob_002_role_selection_navigates(driver):
     """TC-MOB-002 | Role selection navigates to doctor auth route"""
     auth_page = MobileAuthPage(driver)
 
-    driver.get("http://localhost:5173/#/role")
+    driver.get("http://127.0.0.1:5173/#/role")
     
     doctor_card = auth_page.wait_for_element(By.CSS_SELECTOR, '.role-cards .role-card:nth-child(1)')
     doctor_card.click()
@@ -43,7 +43,7 @@ def test_doctor_login_negative_scenarios(driver, tc_id, email, password, err_typ
     """Doctor login negative validation loops"""
     auth_page = MobileAuthPage(driver)
 
-    driver.get("http://localhost:5173/#/auth?role=doctor")
+    driver.get("http://127.0.0.1:5173/#/auth?role=doctor")
     auth_page.login(email, password)
     
     if err_type == 'format':
@@ -57,7 +57,7 @@ def test_tc_mob_008_doctor_login_success(driver, credentials):
     """TC-MOB-008 | Doctor successfully authenticates on mobile device"""
     auth_page = MobileAuthPage(driver)
 
-    driver.get("http://localhost:5173/#/auth?role=doctor")
+    driver.get("http://127.0.0.1:5173/#/auth?role=doctor")
     
     doctor_creds = credentials.get("users", {}).get("doctor", {}).get("valid", {})
     auth_page.login(doctor_creds.get("email"), doctor_creds.get("password"))
@@ -76,7 +76,7 @@ def test_patient_login_negative_scenarios(driver, tc_id, email, password, err_ty
     """Patient login negative validation loops"""
     auth_page = MobileAuthPage(driver)
 
-    driver.get("http://localhost:5173/#/auth?role=patient")
+    driver.get("http://127.0.0.1:5173/#/auth?role=patient")
     auth_page.login(email, password)
     
     if err_type == 'format':
