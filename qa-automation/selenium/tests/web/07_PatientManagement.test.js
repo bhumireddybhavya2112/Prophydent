@@ -137,6 +137,11 @@ describe('Patient Management Module', function () {
         
         await PatientManagementPage.searchPatient(searchName);
         
+        await browser.waitUntil(async () => {
+            const rows = await PatientManagementPage.patientRows;
+            return rows.length === 1;
+        }, { timeout: 5000, timeoutMsg: 'Patient list did not filter to exactly 1 row after search' });
+        
         const rows = await PatientManagementPage.patientRows;
         expect(rows.length).to.equal(1);
         
