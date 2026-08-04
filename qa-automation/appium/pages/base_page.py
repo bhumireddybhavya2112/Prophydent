@@ -27,18 +27,22 @@ class BaseMobilePage:
         element.clear()
         element.send_keys(text)
 
-    def switch_to_webview_context(self):
-        """Switches Appium driver to WebView context for hybrid elements"""
-        logger.info("Appium: Switching to WebView context")
-        contexts = self.driver.contexts
-        logger.info(f"Appium: Available contexts: {contexts}")
+    def switch_to_webview_context(self, timeout=20):
+        """Switches Appium driver to WebView context for hybrid elements, polling until available"""
+        import time
+        logger.info(f"Appium: Polling for WebView context for up to {timeout}s...")
+        end_time = time.time() + timeout
         
-        webview = next((c for c in contexts if "WEBVIEW" in c.upper() or "WEBVIEW" in c), None)
-        if webview:
-            self.driver.switch_to.context(webview)
-            logger.info(f"Appium: Successfully switched context to: {webview}")
-        else:
-            raise Exception("WebView context was not found in active session context list")
+        while time.time() < end_time:
+            contexts = self.driver.contexts
+            webview = next((c for c in contexts if "WEBVIEW" in c.upper()), None)
+            if webview:
+                self.driver.switch_to.context(webview)
+                logger.info(f"Appium: Successfully switched context to: {webview}")
+                return
+            time.sleep(0.5)
+            
+        raise Exception(f"WebView context was not found within {timeout} seconds. Available contexts: {self.driver.contexts}")
 
     def switch_to_native_context(self):
         """Switches Appium driver back to Native App context"""
@@ -47,8 +51,9 @@ class BaseMobilePage:
         logger.info("Appium: Switched context to NATIVE_APP")
 
     # Native Android Selectors
-    NATIVE_ALLOW_PERMISSION = (By.XPATH, '//android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button" or @text="Allow" or @text="WHILE USING THE APP" or contains(@text, "Allow")]')
-    NATIVE_ALLOW_ALWAYS_PERMISSION = (By.XPATH, '//android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_always_button" or @text="Allow all the time"]')
+    from appium.webdriver.common.appiumby import AppiumBy
+    NATIVE_ALLOW_PERMISSION = (AppiumBy.XPATH, '//android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_button" or @text="Allow" or @text="WHILE USING THE APP" or contains(@text, "Allow")]')
+    NATIVE_ALLOW_ALWAYS_PERMISSION = (AppiumBy.XPATH, '//android.widget.Button[@resource-id="com.android.permissioncontroller:id/permission_allow_always_button" or @text="Allow all the time"]')
 
     def handle_permission_dialog_if_shown(self):
         """Explicitly clicks the permission dialog confirmation button if displayed"""

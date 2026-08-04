@@ -33,9 +33,10 @@ class MobileUploadAnalysisPage(BaseMobilePage):
     BTN_SCAN_ANOTHER = (By.CSS_SELECTOR, '.results-state button:nth-of-type(2)')
 
     # Native Android Selectors (to use in NATIVE_APP context)
-    NATIVE_SHUTTER_BTN = (By.XPATH, '//android.widget.ImageView[@content-desc="Shutter" or @resource-id="com.android.camera2:id/shutter_button" or @resource-id="com.android.camera:id/shutter_button" or @content-desc="Take picture"]')
-    NATIVE_CAMERA_ACCEPT_BTN = (By.XPATH, '//android.widget.ImageView[@content-desc="Done" or @resource-id="com.android.camera2:id/done_button" or @text="OK" or @text="SAVE" or @resource-id="com.android.camera2:id/confirm_button"]')
-    NATIVE_FIRST_GALLERY_ITEM = (By.XPATH, '//android.widget.ImageView[contains(@resource-id, "icon") or contains(@resource-id, "thumbnail") or @content-desc="Photo" or @index="0"]')
+    from appium.webdriver.common.appiumby import AppiumBy
+    NATIVE_SHUTTER_BTN = (AppiumBy.XPATH, '//android.widget.ImageView[@content-desc="Shutter" or @resource-id="com.android.camera2:id/shutter_button" or @resource-id="com.android.camera:id/shutter_button" or @content-desc="Take picture"]')
+    NATIVE_CAMERA_ACCEPT_BTN = (AppiumBy.XPATH, '//android.widget.ImageView[@content-desc="Done" or @resource-id="com.android.camera2:id/done_button" or @text="OK" or @text="SAVE" or @resource-id="com.android.camera2:id/confirm_button"]')
+    NATIVE_FIRST_GALLERY_ITEM = (AppiumBy.XPATH, '//android.widget.ImageView[contains(@resource-id, "icon") or contains(@resource-id, "thumbnail") or @content-desc="Photo" or @index="0"]')
 
     def capture_image_from_native_camera(self):
         """Triggers the native camera and captures an image"""
