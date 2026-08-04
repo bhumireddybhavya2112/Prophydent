@@ -90,8 +90,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Load the local compiled React web app from assets
-        webView.loadUrl("file:///android_asset/public/index.html");
+        // Load the local Vite dev server via adb reverse proxy
+        if (0 != (getApplicationInfo().flags & android.content.pm.ApplicationInfo.FLAG_DEBUGGABLE)) {
+            webView.loadUrl("http://localhost:5173");
+        } else {
+            webView.loadUrl("file:///android_asset/public/index.html");
+        }
     }
 
     @Override
