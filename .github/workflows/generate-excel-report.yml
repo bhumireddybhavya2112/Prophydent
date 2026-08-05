@@ -1,0 +1,38 @@
+name: Generate QA Excel Report
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          pip install openpyxl pandas xlsxwriter
+
+      - name: Generate and Validate Sample Report
+        run: |
+          python generate_sample_report.py
+
+      - name: Verify report.xlsx exists
+        run: |
+          if [ ! -f "report.xlsx" ]; then
+            echo "Error: report.xlsx was not generated!"
+            exit 1
+          fi
+
+      - name: Upload Excel Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: excel-report
+          path: report.xlsx
+          if-no-files-found: error
