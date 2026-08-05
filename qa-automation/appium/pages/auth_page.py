@@ -12,17 +12,17 @@ class MobileAuthPage(BaseMobilePage):
     ROLE_LABEL = (By.CSS_SELECTOR, '.auth-header .text-muted')
     BACK_BTN = (By.CSS_SELECTOR, '.back-btn')
     
-    INPUT_EMAIL = (By.CSS_SELECTOR, 'input[type="email"]')
-    INPUT_PASSWORD = (By.CSS_SELECTOR, 'input[type="password"]')
-    INPUT_FULL_NAME = (By.CSS_SELECTOR, 'input[placeholder*="Doe"]')
-    INPUT_MOBILE = (By.CSS_SELECTOR, 'input[type="tel"]')
+    INPUT_EMAIL = (By.XPATH, '//label[contains(text(), "Email")]/following-sibling::input')
+    INPUT_PASSWORD = (By.XPATH, '//label[contains(text(), "Password")]/following-sibling::input')
+    INPUT_FULL_NAME = (By.XPATH, '//label[contains(text(), "Full Name")]/following-sibling::input')
+    INPUT_MOBILE = (By.XPATH, '//label[contains(text(), "Mobile")]/following-sibling::input')
     INPUT_ADDRESS = (By.CSS_SELECTOR, 'input[placeholder*="Clinical"]')
     SELECT_GENDER = (By.CSS_SELECTOR, 'select')
     INPUT_AVATAR = (By.CSS_SELECTOR, 'input#avatarUpload')
     
     BTN_SUBMIT = (By.CSS_SELECTOR, 'button[type="submit"]')
     LINK_TOGGLE_MODE = (By.CSS_SELECTOR, '.text-link')
-    ERROR_MESSAGE = (By.CSS_SELECTOR, '.error-message')
+    ERROR_MESSAGE = (By.CSS_SELECTOR, '.alert.alert-error')
 
     def login(self, email, password):
         """Authenticates the user in the mobile WebView"""

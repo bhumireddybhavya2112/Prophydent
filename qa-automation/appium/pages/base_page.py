@@ -18,12 +18,27 @@ class BaseMobilePage:
 
     def click_element(self, by, selector):
         """Safely clicks an element"""
-        element = self.wait_for_element(by, selector)
+        element = WebDriverWait(self.driver, 15).until(
+            EC.element_to_be_clickable((by, selector))
+        )
+        # Handle scrolling if element is not in view
+        try:
+            self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+            import time
+            time.sleep(0.5)
+        except:
+            pass
         element.click()
 
     def type_text(self, by, selector, text):
         """Safely types text into an input field"""
         element = self.wait_for_element(by, selector)
+        try:
+            self.driver.execute_script("arguments[0].scrollIntoView(true);", element)
+            import time
+            time.sleep(0.5)
+        except:
+            pass
         element.clear()
         element.send_keys(text)
 

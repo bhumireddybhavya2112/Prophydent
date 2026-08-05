@@ -80,6 +80,12 @@ class MobileUploadAnalysisPage(BaseMobilePage):
         """Selects the first patient from the patient dropdown list"""
         logger.info("Appium: Selecting patient from dropdown")
         element = self.wait_for_element(*self.SELECT_PATIENT)
+        
+        # Wait until options are populated (more than the default placeholder)
+        WebDriverWait(self.driver, 15).until(
+            lambda d: len(Select(d.find_element(*self.SELECT_PATIENT)).options) > 1
+        )
+        
         Select(element).select_by_index(1)
         
         # Wait for value to change
