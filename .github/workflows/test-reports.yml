@@ -85,6 +85,14 @@ jobs:
           path: qa-automation/selenium/reports/screenshots
           if-no-files-found: ignore
 
+      - name: Upload Selenium Excel Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-excel-report
+          path: qa-automation/selenium/reports/excel/Selenium_Test_Cases.xlsx
+          if-no-files-found: ignore
+
   mobile-tests:
     runs-on: ubuntu-latest
     steps:
@@ -199,6 +207,14 @@ jobs:
           path: qa-automation/appium/report.xml
           if-no-files-found: ignore
 
+      - name: Upload Appium Excel Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: appium-excel-report
+          path: qa-automation/selenium/reports/excel/Appium_Test_Cases.xlsx
+          if-no-files-found: ignore
+
   load-tests:
     runs-on: ubuntu-latest
     steps:
@@ -233,4 +249,12 @@ jobs:
         with:
           name: k6-load-reports
           path: qa-automation/load/reports/
+          if-no-files-found: ignore
+
+      - name: Upload Load Tests Excel Report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: load-excel-report
+          path: qa-automation/selenium/reports/excel/Load_Test_Cases.xlsx
           if-no-files-found: ignore
